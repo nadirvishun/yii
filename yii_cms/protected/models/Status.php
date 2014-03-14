@@ -83,4 +83,12 @@ class Status extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	/**
+	 * 获取下拉菜单
+	 */
+	public function getStatusList()
+	{
+		$arrStatus = Status::model()->findAll();
+		return CHtml::listData($arrStatus, 'id', 'status_name');
+	}
 }

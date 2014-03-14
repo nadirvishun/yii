@@ -19,6 +19,9 @@ return array(
 	),
 
 	'modules'=>array(
+		'Admin'=>array(
+			'class'=>'application.modules.Admin.AdminModule',
+		),
 		// uncomment the following to enable the Gii tool
 		
 		'gii'=>array(

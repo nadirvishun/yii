@@ -1,0 +1,285 @@
+2014/03/14 13:45:18 [error] [php] include(Admin.php): failed to open stream: No such file or directory (E:\Github\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\Github\yii\yii_cms\protected\controllers\BannerController.php(4): spl_autoload_call()
+#1 E:\Github\yii\framework\web\CWebApplication.php(354): require()
+#2 E:\Github\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\Github\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=banner
+in E:\Github\yii\yii_cms\protected\controllers\BannerController.php (4)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/14 13:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Admin".' in E:\Github\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin')
+#1 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin
+---
+2014/03/14 14:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in E:\Github\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=user
+---
+2014/03/14 14:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in E:\Github\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=user
+---
+2014/03/14 14:53:08 [error] [exception.CException] exception 'CException' with message 'Property "User.passwordAgain" is not defined.' in E:\Github\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('passwordAgain')
+#1 E:\Github\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('passwordAgain')
+#2 E:\Github\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(User), 'passwordAgain')
+#3 E:\Github\yii\framework\web\helpers\CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'passwordAgain', Array)
+#4 E:\Github\yii\framework\web\widgets\CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'passwordAgain', Array)
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\_form.php(31): CActiveForm->passwordField(Object(User), 'passwordAgain', Array)
+#6 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#7 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#8 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#9 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\create.php(18): CController->renderPartial('_form', Array)
+#10 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#11 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#12 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#13 E:\Github\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(79): CController->render('create', Array)
+#15 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#16 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#26 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user
+---
+2014/03/14 15:58:24 [error] [exception.CException] exception 'CException' with message 'Property "User.create_time" is not defined.' in E:\Github\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('create_time', '2014-03-14 15:5...')
+#1 E:\Github\yii\yii_cms\protected\models\User.php(142): CActiveRecord->__set('create_time', '2014-03-14 15:5...')
+#2 E:\Github\yii\framework\db\ar\CActiveRecord.php(1017): User->beforeSave()
+#3 E:\Github\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#4 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(73): CActiveRecord->save()
+#5 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#6 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#16 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+---
+2014/03/14 16:00:41 [error] [exception.CException] exception 'CException' with message 'Property "User.creat_user_id" is not defined.' in E:\Github\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('creat_user_id')
+#1 E:\Github\yii\framework\validators\CStringValidator.php(79): CActiveRecord->__get('creat_user_id')
+#2 E:\Github\yii\framework\validators\CValidator.php(213): CStringValidator->validateAttribute(Object(User), 'creat_user_id')
+#3 E:\Github\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 E:\Github\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(73): CActiveRecord->save()
+#6 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#7 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#17 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+---
+2014/03/14 16:02:47 [error] [exception.CException] exception 'CException' with message 'Property "User.creat_user_id" is not defined.' in E:\Github\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('creat_user_id')
+#1 E:\Github\yii\framework\validators\CStringValidator.php(79): CActiveRecord->__get('creat_user_id')
+#2 E:\Github\yii\framework\validators\CValidator.php(213): CStringValidator->validateAttribute(Object(User), 'creat_user_id')
+#3 E:\Github\yii\framework\base\CModel.php(159): CValidator->validate(Object(User), NULL)
+#4 E:\Github\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(73): CActiveRecord->save()
+#6 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#7 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#17 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+---
+2014/03/14 16:10:05 [error] [exception.CException] exception 'CException' with message 'Property "User.passwordAgain" is not defined.' in E:\Github\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('passwordAgain', '')
+#1 E:\Github\yii\framework\base\CModel.php(471): CActiveRecord->__set('passwordAgain', '')
+#2 E:\Github\yii\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#3 E:\Github\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('attributes', Array)
+#4 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(72): CActiveRecord->__set('attributes', Array)
+#5 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#6 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#16 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+---
+2014/03/14 16:10:11 [error] [exception.CException] exception 'CException' with message 'Property "User.passwordAgain" is not defined.' in E:\Github\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('passwordAgain')
+#1 E:\Github\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('passwordAgain')
+#2 E:\Github\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(User), 'passwordAgain')
+#3 E:\Github\yii\framework\web\helpers\CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'passwordAgain', Array)
+#4 E:\Github\yii\framework\web\widgets\CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'passwordAgain', Array)
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\_form.php(31): CActiveForm->passwordField(Object(User), 'passwordAgain', Array)
+#6 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#7 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#8 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#9 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\create.php(18): CController->renderPartial('_form', Array)
+#10 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#11 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#12 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#13 E:\Github\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(79): CController->render('create', Array)
+#15 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#16 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#26 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/index
+---
+2014/03/14 16:10:15 [error] [exception.CException] exception 'CException' with message 'Property "User.passwordAgain" is not defined.' in E:\Github\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\Github\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('passwordAgain')
+#1 E:\Github\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('passwordAgain')
+#2 E:\Github\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(User), 'passwordAgain')
+#3 E:\Github\yii\framework\web\helpers\CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'passwordAgain', Array)
+#4 E:\Github\yii\framework\web\widgets\CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'passwordAgain', Array)
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\_form.php(31): CActiveForm->passwordField(Object(User), 'passwordAgain', Array)
+#6 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#7 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#8 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#9 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\create.php(18): CController->renderPartial('_form', Array)
+#10 E:\Github\yii\framework\web\CBaseController.php(126): require('E:\Github\yii\y...')
+#11 E:\Github\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\Github\yii\y...', Array, true)
+#12 E:\Github\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\Github\yii\y...', Array, true)
+#13 E:\Github\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(79): CController->render('create', Array)
+#15 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#16 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 E:\Github\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 E:\Github\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/user/crea...')
+#26 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/index
+---
+2014/03/14 16:18:05 [error] [php] include(StatusType.php): failed to open stream: No such file or directory (E:\Github\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\Github\yii\yii_cms\protected\models\Status.php(91): spl_autoload_call()
+#1 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\_form.php(45): Status->getStatusList()
+#2 E:\Github\yii\framework\web\CBaseController.php(126): require()
+#3 E:\Github\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#4 E:\Github\yii\framework\web\CController.php(869): UserController->renderFile()
+#5 E:\Github\yii\yii_cms\protected\modules\Admin\views\user\create.php(18): UserController->renderPartial()
+#6 E:\Github\yii\framework\web\CBaseController.php(126): require()
+#7 E:\Github\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#8 E:\Github\yii\framework\web\CController.php(869): UserController->renderFile()
+#9 E:\Github\yii\framework\web\CController.php(782): UserController->renderPartial()
+#10 E:\Github\yii\yii_cms\protected\modules\Admin\controllers\UserController.php(79): UserController->render()
+#11 E:\Github\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#12 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 E:\Github\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#14 E:\Github\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 E:\Github\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#16 E:\Github\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#17 E:\Github\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#18 E:\Github\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 E:\Github\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#20 E:\Github\yii\framework\web\CWebApplication.php(282): UserController->run()
+#21 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 E:\Github\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/create
+in E:\Github\yii\yii_cms\protected\models\Status.php (91)
+in E:\Github\yii\yii_cms\protected\modules\Admin\views\user\_form.php (45)
+in E:\Github\yii\yii_cms\protected\modules\Admin\views\user\create.php (18)
+2014/03/14 16:26:45 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._id" is not defined.' in E:\Github\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\Github\yii\yii_cms\protected\components\UserIdentity.php(42): CComponent->__set('_id', '1')
+#1 E:\Github\yii\yii_cms\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 E:\Github\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 E:\Github\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 E:\Github\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 E:\Github\yii\yii_cms\protected\controllers\SiteController.php(94): CModel->validate()
+#6 E:\Github\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 E:\Github\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\Github\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\Github\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---

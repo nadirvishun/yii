@@ -11,7 +11,7 @@
  * @property string $type_id
  * @property string $create_time
  * @property string $update_time
- * @property string $creat_user_id
+ * @property string $create_user_id
  * @property string $update_user_id
  * @property integer $status_id
  * @property string $hit
@@ -44,13 +44,13 @@ class Pruducts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pruducts_name, pruducts_img, pruducts_content, type_id, create_time, update_time, creat_user_id, update_user_id, status_id', 'required'),
+			array('pruducts_name, pruducts_img, pruducts_content, type_id, create_time, update_time, create_user_id, update_user_id, status_id', 'required'),
 			array('pruducts_img, status_id', 'numerical', 'integerOnly'=>true),
 			array('pruducts_name, hit', 'length', 'max'=>255),
-			array('type_id, creat_user_id, update_user_id', 'length', 'max'=>10),
+			array('type_id, create_user_id, update_user_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, pruducts_name, pruducts_img, pruducts_content, type_id, create_time, update_time, creat_user_id, update_user_id, status_id, hit', 'safe', 'on'=>'search'),
+			array('id, pruducts_name, pruducts_img, pruducts_content, type_id, create_time, update_time, create_user_id, update_user_id, status_id, hit', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,7 +78,7 @@ class Pruducts extends CActiveRecord
 			'type_id' => 'Type',
 			'create_time' => 'Create Time',
 			'update_time' => 'Update Time',
-			'creat_user_id' => 'Creat User',
+			'create_user_id' => 'Create User',
 			'update_user_id' => 'Update User',
 			'status_id' => 'Status',
 			'hit' => 'Hit',
@@ -103,7 +103,7 @@ class Pruducts extends CActiveRecord
 		$criteria->compare('type_id',$this->type_id,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('update_time',$this->update_time,true);
-		$criteria->compare('creat_user_id',$this->creat_user_id,true);
+		$criteria->compare('create_user_id',$this->create_user_id,true);
 		$criteria->compare('update_user_id',$this->update_user_id,true);
 		$criteria->compare('status_id',$this->status_id);
 		$criteria->compare('hit',$this->hit,true);
