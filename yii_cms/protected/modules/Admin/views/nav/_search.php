@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'nav_title'); ?>
-		<?php echo $form->textField($model,'nav_title'); ?>
+		<?php echo $form->textField($model,'nav_title',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
 
 	<div class="row">

@@ -6,7 +6,7 @@
  * The followings are the available columns in table '{{nav}}':
  * @property string $id
  * @property string $nav_url
- * @property integer $nav_title
+ * @property string $nav_title
  * @property integer $status_id
  */
 class Nav extends CActiveRecord
@@ -37,9 +37,10 @@ class Nav extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nav_title, status_id', 'required'),
-			array('nav_title, status_id', 'numerical', 'integerOnly'=>true),
+			array('nav_title', 'required'),
+			array('status_id', 'numerical', 'integerOnly'=>true),
 			array('nav_url', 'length', 'max'=>1000),
+			array('nav_title', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, nav_url, nav_title, status_id', 'safe', 'on'=>'search'),
@@ -54,6 +55,7 @@ class Nav extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'statusName'=>array(self::BELONGS_TO,'Status','status_id'),
 		);
 	}
 
@@ -64,9 +66,9 @@ class Nav extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nav_url' => 'Nav Url',
-			'nav_title' => 'Nav Title',
-			'status_id' => 'Status',
+			'nav_url' => '地址',
+			'nav_title' => '标题',
+			'status_id' => '状态',
 		);
 	}
 
@@ -83,7 +85,7 @@ class Nav extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nav_url',$this->nav_url,true);
-		$criteria->compare('nav_title',$this->nav_title);
+		$criteria->compare('nav_title',$this->nav_title,true);
 		$criteria->compare('status_id',$this->status_id);
 
 		return new CActiveDataProvider($this, array(

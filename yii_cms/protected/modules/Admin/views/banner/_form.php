@@ -16,50 +16,34 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'banner_url'); ?>
-		<?php echo $form->textField($model,'banner_url',array('size'=>60,'maxlength'=>1000)); ?>
-		<?php echo $form->error($model,'banner_url'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'banner_img'); ?>
-		<?php echo $form->textField($model,'banner_img',array('size'=>35,'maxlength'=>35)); ?>
-		<?php echo $form->error($model,'banner_img'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'banner_title'); ?>
 		<?php echo $form->textField($model,'banner_title',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'banner_title'); ?>
 	</div>
-
+	
 	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
+		<?php echo $form->labelEx($model,'banner_url'); ?>
+		<p class="hint">格式：Http://www.xxxx.com</p>
+		<?php echo $form->textField($model,'banner_url',array('size'=>60,'maxlength'=>1000)); ?>
+		<?php echo $form->error($model,'banner_url'); ?>
 	</div>
 
+	
+	
 	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
+		<?php echo $form->labelEx($model,'banner_img'); ?>
+		<p class="hint">图片尺寸为：xxxx,格式为jpg</p>
+		<?php echo $form->fileField($model,'banner_img',array('size'=>35,'maxlength'=>35)); ?>
+		<?php echo $form->error($model,'banner_img'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
-	</div>
+	
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status_id'); ?>
-		<?php echo $form->textField($model,'status_id'); ?>
+		<?php echo $form->dropDownList($model,'status_id',Status::model()->getStatusList()); ?>
 		<?php echo $form->error($model,'status_id'); ?>
 	</div>
 

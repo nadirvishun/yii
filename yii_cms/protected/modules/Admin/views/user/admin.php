@@ -46,18 +46,23 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'username',
+// 		'username',
+		array('name'=>'username','type'=>'raw', 'value'=>'CHtml::link($data->username,array("view","id"=>$data->id),array("target"=>"_blank"))'),
 		'password',
 		'realname',
+// 		'status_id',
+		array('name'=>'status_id','value'=>'$data->statusName->status_name','filter'=>Status::model()->getStatusList(),'htmlOptions'=>array('width'=>'55px'),),
 		'create_time',
-		'update_time',
 		/*
+		'update_time',
 		'create_user_id',
 		'update_user_id',
-		'status_id',
 		*/
+		
+		
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{update}{delete}',
 		),
 	),
 )); ?>

@@ -61,7 +61,7 @@ class PruductsType extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'pruducts_type_name' => 'Pruducts Type Name',
+			'pruducts_type_name' => '产品类别',
 		);
 	}
 

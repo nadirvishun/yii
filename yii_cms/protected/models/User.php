@@ -45,8 +45,8 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username, password', 'required'),
-			array('password','compare','compareAttribute'=>'passwordAgain', 'message' => '两次密码输入不一致'),
-			
+// 			array('password','compare','compareAttribute'=>'passwordAgain', 'message' => '两次密码输入不一致'),
+			array('password', 'compare', 'compareAttribute'=>'passwordAgain', 'on'=>'register, updatePass'),
 			array('username','unique'),
 			array('status_id', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
@@ -68,6 +68,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'statusName'=>array(self::BELONGS_TO,'Status','status_id'),
 		);
 	}
 
@@ -115,21 +116,7 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	/**
-	 * ValidatePassword 利用本身的password作为关键词加密
-	 */
-	public function validatePassword($password)
-	{
-		return $this->encrypt($password)===$this->password;
-	}
-	/**
-	 * md5方式加密
-	 * @return string
-	 */
-	public function encrypt($pass)
-	{
-		return md5($pass);
-	}
+	
 	/**
 	 * 自动存储创建/更新时间和id
 	 */
@@ -154,5 +141,20 @@ class User extends CActiveRecord
 		}else {
 			return false;
 		}
+	}
+	/**
+	 * ValidatePassword 利用本身的password作为关键词加密
+	 */
+	public function validatePassword($password)
+	{
+		return $this->encrypt($password)===$this->password;
+	}
+	/**
+	 * md5方式加密
+	 * @return string
+	 */
+	public function encrypt($pass)
+	{
+		return md5($pass);
 	}
 }

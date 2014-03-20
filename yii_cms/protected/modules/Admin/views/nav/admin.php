@@ -48,7 +48,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'nav_url',
 		'nav_title',
-		'status_id',
+// 		'status_id',
+		array('name'=>'status_id','value'=>'$data->statusName->status_name','filter'=>Status::model()->getStatusList()),
 		array(
 			'class'=>'CButtonColumn',
 		),
