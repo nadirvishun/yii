@@ -47,8 +47,8 @@ class Banner extends CActiveRecord
 			array('banner_url', 'length', 'max'=>1000),
 			array('banner_img', 'length', 'max'=>35),
 			array('banner_title', 'length', 'max'=>100),
-			array('banner_img', 'file', 'types'=>'jpg', 'on'=>'create'),
-			array('banner_img', 'file', 'allowEmpty'=>true, 'types'=>'jpg'),
+			array('banner_img', 'file', 'types'=>'jpg,gif,png', 'on'=>'create'),
+			array('banner_img', 'file', 'allowEmpty'=>true, 'types'=>'jpg,gif,png'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, banner_url, banner_img, banner_title, create_time, update_time, create_user_id, update_user_id, status_id', 'safe', 'on'=>'search'),
@@ -108,5 +108,23 @@ class Banner extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	/**
+	 * 自动保存创建时间创建人等
+	 */
+	public function beforeSave()
+	{
+		if (parent::beforSave()){
+			if($this->isNewRecord){
+				$this->create_time=$this->update_time=date('Y-m-d H:i:s');
+				$this->create_user_id=$this->update_user_id=Yii::app()->user->id;
+			}else{
+				$this->update_time=date('Y-m-d H:i:s');
+				$this->update_user_id=Yii::app()->user->id;
+			}
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
