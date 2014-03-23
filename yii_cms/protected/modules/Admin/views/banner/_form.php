@@ -24,7 +24,7 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'banner_url'); ?>
-		<p class="hint">格式：Http://www.xxxx.com</p>
+		<p class="hint">格式：http://www.xxxx.com</p>
 		<?php echo $form->textField($model,'banner_url',array('size'=>60,'maxlength'=>1000)); ?>
 		<?php echo $form->error($model,'banner_url'); ?>
 	</div>
@@ -33,8 +33,8 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'banner_img'); ?>
-		<p class="hint">图片尺寸为：xxxx,格式为jpg</p>
-		<?php echo $form->fileField($model,'banner_img',array('size'=>35,'maxlength'=>35)); ?>
+		<p class="hint">图片尺寸为：xxxx,格式为jpg/gif/png</p>
+		<?php echo $form->fileField($model,'banner_img',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'banner_img'); ?>
 	</div>
 

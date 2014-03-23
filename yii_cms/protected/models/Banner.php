@@ -45,7 +45,7 @@ class Banner extends CActiveRecord
 
 			array('status_id', 'numerical', 'integerOnly'=>true),
 			array('banner_url', 'length', 'max'=>1000),
-			array('banner_img', 'length', 'max'=>35),
+			array('banner_img', 'length', 'max'=>255),
 			array('banner_title', 'length', 'max'=>100),
 			array('banner_img', 'file', 'types'=>'jpg,gif,png', 'on'=>'create'),
 			array('banner_img', 'file', 'allowEmpty'=>true, 'types'=>'jpg,gif,png'),

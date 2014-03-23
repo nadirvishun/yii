@@ -84,7 +84,7 @@ class Status extends CActiveRecord
 		));
 	}
 	/**
-	 * 获取下拉菜单
+	 * 获取状态的下拉菜单
 	 */
 	public function getStatusList()
 	{

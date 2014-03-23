@@ -9,6 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'pruducts-form',
 	'enableAjaxValidation'=>false,
+	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -21,51 +22,40 @@
 		<?php echo $form->error($model,'pruducts_name'); ?>
 	</div>
 
+	
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'pruducts_content'); ?>
+		<?php $this->widget('application.extensions.editor.CKkceditor',array(
+   			 "model"=>$model,                # Data-Model
+   			 "attribute"=>'pruducts_content',         # Attribute in the Data-Model
+   			 "height"=>'400px',
+   			 "width"=>'100%',
+   			 "filespath"=>Yii::app()->basePath."/../upload/pruducts_content/",
+   			 "filesurl"=>Yii::app()->baseUrl."/upload/pruducts_content/",
+  			  ) 
+			);?>
+		<?php echo $form->error($model,'pruducts_content'); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'pruducts_img'); ?>
-		<?php echo $form->textField($model,'pruducts_img'); ?>
+		<p class="hint">图片尺寸为：xxxx,格式为jpg/gif/png</p>
+		<?php echo $form->fileField($model,'pruducts_img',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'pruducts_img'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pruducts_content'); ?>
-		<?php echo $form->textArea($model,'pruducts_content',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'pruducts_content'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'type_id'); ?>
-		<?php echo $form->textField($model,'type_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'type_id',PruductsType::model()->getPruductsTypeList()); ?>
 		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status_id'); ?>
-		<?php echo $form->textField($model,'status_id'); ?>
+		<?php echo $form->dropDownList($model,'status_id',Status::model()->getStatusList()); ?>
 		<?php echo $form->error($model,'status_id'); ?>
 	</div>
 

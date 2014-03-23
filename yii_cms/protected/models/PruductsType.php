@@ -83,4 +83,12 @@ class PruductsType extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	/**
+	 * 获取产品类别的下拉菜单
+	 */
+	public function getPruductsTypeList()
+	{
+		$arrType=PruductsType::model()->findAll();
+		return CHtml::listData($arrType,'id','pruducts_type_name');
+	}
 }

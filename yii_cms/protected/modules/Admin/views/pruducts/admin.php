@@ -47,11 +47,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'pruducts_name',
-		'pruducts_img',
+// 		'pruducts_img',
+		array('name'=>'pruducts_img','type'=>'raw','value'=>'CHtml::image(Yii::app()->baseUrl."/upload/pruducts_img/".$data->pruducts_img,"",array("width"=>"200px"))', 'filter'=>false),
 		'pruducts_content',
-		'type_id',
-		'create_time',
+// 		'type_id',
+		array('name'=>'type_id','value'=>'$data->typeName->pruducts_type_name','filter'=>PruductsType::model()->getPruductsTypeList(),'htmlOptions'=>array('width'=>'45px')),
+// 		'status_id',
+		array('name'=>'status_id','value'=>'$data->statusName->status_name','filter'=>Status::model()->getStatusList(),'htmlOptions'=>array('width'=>'45px')),
+		
 		/*
+		'create_time',
 		'update_time',
 		'create_user_id',
 		'update_user_id',

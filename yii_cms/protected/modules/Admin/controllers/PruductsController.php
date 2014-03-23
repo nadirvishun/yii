@@ -62,7 +62,7 @@ class PruductsController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Pruducts;
+		$model=new Pruducts('create');
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,6 +70,19 @@ class PruductsController extends Controller
 		if(isset($_POST['Pruducts']))
 		{
 			$model->attributes=$_POST['Pruducts'];
+			if(!empty($_FILES['Pruducts']['name']['pruducts_img'])){
+			
+			
+				$model->pruducts_img=CUploadedFile::getInstance($model, 'pruducts_img');
+				$ext = $model->pruducts_img->extensionName;
+				$tmpName='pruducts_'.time().'.'.$ext;
+				if ($model->validate(array('pruducts_img'))) {
+					$model->pruducts_img->Saveas(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					$model->pruducts_img=$tmpName;
+				}else {
+					$model->pruducts_img='default';
+				}
+			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -94,6 +107,21 @@ class PruductsController extends Controller
 		if(isset($_POST['Pruducts']))
 		{
 			$model->attributes=$_POST['Pruducts'];
+			$tmpOldName=$model->pruducts_img;
+			
+			if (@!empty($_FILES['Pruducts']['name']['pruducts_img'])) {
+				$model->pruducts_img=CUploadedFile::getInstance($model, 'pruducts_img');
+				$ext = $model->pruducts_img->extensionName;
+				$tmpName='pruducts_'.time().'.'.$ext;
+			
+				if ($model->validate(array('pruducts_img'))) {
+					$model->pruducts_img->Saveas(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					$model->pruducts_img=$tmpName;
+					@unlink(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpOldName);
+				}
+			}else {
+				$model->pruducts_img = $tmpOldName;
+			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

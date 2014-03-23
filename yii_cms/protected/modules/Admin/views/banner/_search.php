@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'banner_img'); ?>
-		<?php echo $form->textField($model,'banner_img',array('size'=>35,'maxlength'=>35)); ?>
+		<?php echo $form->textField($model,'banner_img',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">

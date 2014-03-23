@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'pruducts_img'); ?>
-		<?php echo $form->textField($model,'pruducts_img'); ?>
+		<?php echo $form->textField($model,'pruducts_img',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
