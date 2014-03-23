@@ -46,7 +46,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'nav_url',
+// 		'nav_url',
+		array('name'=>'nav_url','type'=>'raw','value'=>'CHtml::link($data->nav_url,$data->nav_url,array("target"=>"_blank"))', 'htmlOptions'=>array('width'=>'95px')),
 		'nav_title',
 // 		'status_id',
 		array('name'=>'status_id','value'=>'$data->statusName->status_name','filter'=>Status::model()->getStatusList()),

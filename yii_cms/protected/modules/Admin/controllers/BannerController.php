@@ -70,6 +70,20 @@ class BannerController extends Controller
 		if(isset($_POST['Banner']))
 		{
 			$model->attributes=$_POST['Banner'];
+			
+			if(!empty($_FILES['Banner']['name']['banner_img'])){
+				
+				
+				$model->banner_img=CUploadedFile::getInstance($model, 'banner_img');
+				$ext = $model->banner_img->extensionName;
+				$tmpName='banner_'.time().'.'.$ext;
+				if ($model->validate(array('banner_img'))) {
+					$model->banner_img->Saveas(Yii::app()->basePath.'/../upload/banner_img/'.$tmpName);
+					$model->banner_img=$tmpName;
+				}else {
+					$model->banner_img='default';
+				}
+			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -93,8 +107,25 @@ class BannerController extends Controller
 
 		if(isset($_POST['Banner']))
 		{
+			$tmpOldName=$model->banner_img;
 			$model->attributes=$_POST['Banner'];
-			if($model->save())
+			if (@!empty($_FILES['Banner']['name']['banner_img'])) {
+				$model->banner_img=CUploadedFile::getInstance($model, 'banner_img');
+				$ext = $model->banner_img->extensionName;
+				$tmpName='banner_'.time().'.'.$ext;
+				
+				if ($model->validate(array('banner_img'))) {
+					$model->banner_img->Saveas(Yii::app()->basePath.'/../upload/banner_img/'.$tmpName);
+					$model->banner_img=$tmpName;
+					@unlink(Yii::app()->basePath.'/../upload/banner_img/'.$tmpOldName);
+				}
+			}else {
+				$model->banner_img = $tmpOldName;
+			}			
+			
+
+
+				if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 

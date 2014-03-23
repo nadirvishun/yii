@@ -652,3 +652,217 @@ Stack trace:
 REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user/admin
 HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin/user/view&id=1
 ---
+2014/03/23 11:54:21 [error] [php] include(Admin.php): failed to open stream: No such file or directory (D:\GitHub\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\GitHub\yii\yii_cms\protected\controllers\BannerController.php(4): spl_autoload_call()
+#1 D:\GitHub\yii\framework\web\CWebApplication.php(354): require()
+#2 D:\GitHub\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=banner
+in D:\GitHub\yii\yii_cms\protected\controllers\BannerController.php (4)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 11:54:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in D:\GitHub\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=user
+---
+2014/03/23 11:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/banner".' in D:\GitHub\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/banner')
+#1 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=admin/banner
+---
+2014/03/23 12:20:57 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:20:57 [error] [php] Undefined variable: uploadedimage (D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php:73)
+Stack trace:
+#0 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): BannerController->runAction()
+#1 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 D:\GitHub\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): BannerController->filterAccessControl()
+#4 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\GitHub\yii\framework\web\CController.php(265): BannerController->runActionWithFilters()
+#7 D:\GitHub\yii\framework\web\CWebApplication.php(282): BannerController->run()
+#8 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/create
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (73)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:23:37 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:23:37 [error] [php] move_uploaded_file(D:\GitHub\yii\yii_cms\protectedupload/banner_img/banner_1395548617.ext): failed to open stream: No such file or directory (D:\GitHub\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): BannerController->actionCreate()
+#1 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): BannerController->runAction()
+#3 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\GitHub\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): BannerController->filterAccessControl()
+#6 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\GitHub\yii\framework\web\CController.php(265): BannerController->runActionWithFilters()
+#9 D:\GitHub\yii\framework\web\CWebApplication.php(282): BannerController->run()
+#10 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/create
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (81)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:25:06 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:25:06 [error] [php] move_uploaded_file(D:\GitHub\yii\yii_cms\protected../upload/banner_img/banner_1395548706.ext): failed to open stream: No such file or directory (D:\GitHub\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): BannerController->actionCreate()
+#1 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): BannerController->runAction()
+#3 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\GitHub\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): BannerController->filterAccessControl()
+#6 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\GitHub\yii\framework\web\CController.php(265): BannerController->runActionWithFilters()
+#9 D:\GitHub\yii\framework\web\CWebApplication.php(282): BannerController->run()
+#10 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/create
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (81)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:26:06 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:26:06 [error] [exception.CException] exception 'CException' with message 'Banner and its behaviors do not have a method or closure named "beforSave".' in D:\GitHub\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('beforSave', Array)
+#1 D:\GitHub\yii\yii_cms\protected\models\Banner.php(117): CActiveRecord->__call('beforSave', Array)
+#2 D:\GitHub\yii\yii_cms\protected\models\Banner.php(117): CActiveRecord->beforSave()
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1017): Banner->beforeSave()
+#4 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#5 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php(87): CActiveRecord->save()
+#6 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): BannerController->actionCreate()
+#7 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/banner/cr...')
+#17 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/create
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/banner/create
+---
+2014/03/23 12:26:42 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:28:04 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:29:10 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:30:20 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:39:05 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (111)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:49:16 [error] [php] include(Staus.php): failed to open stream: No such file or directory (D:\GitHub\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(386): spl_autoload_call()
+#1 D:\GitHub\yii\framework\db\ar\CActiveFinder.php(215): model()
+#2 D:\GitHub\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(271): CActiveFinder->__construct()
+#4 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(141): Banner->getRelated()
+#5 D:\GitHub\yii\framework\base\CComponent.php(606) : eval()'d code(1): Banner->__get()
+#6 D:\GitHub\yii\framework\base\CComponent.php(606): eval()
+#7 D:\GitHub\yii\framework\zii\widgets\grid\CDataColumn.php(131): CDataColumn->evaluateExpression()
+#8 D:\GitHub\yii\framework\zii\widgets\grid\CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#9 D:\GitHub\yii\framework\zii\widgets\grid\CGridView.php(589): CDataColumn->renderDataCell()
+#10 D:\GitHub\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#11 D:\GitHub\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#12 D:\GitHub\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#13 unknown(0): CGridView->renderSection()
+#14 D:\GitHub\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#15 D:\GitHub\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#16 D:\GitHub\yii\framework\web\CBaseController.php(173): CGridView->run()
+#17 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\banner\admin.php(65): BannerController->widget()
+#18 D:\GitHub\yii\framework\web\CBaseController.php(126): require()
+#19 D:\GitHub\yii\framework\web\CBaseController.php(95): BannerController->renderInternal()
+#20 D:\GitHub\yii\framework\web\CController.php(869): BannerController->renderFile()
+#21 D:\GitHub\yii\framework\web\CController.php(782): BannerController->renderPartial()
+#22 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php(174): BannerController->render()
+#23 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): BannerController->actionAdmin()
+#24 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#25 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): BannerController->runAction()
+#26 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 D:\GitHub\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#28 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): BannerController->filterAccessControl()
+#29 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#30 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#31 D:\GitHub\yii\framework\web\CController.php(265): BannerController->runActionWithFilters()
+#32 D:\GitHub\yii\framework\web\CWebApplication.php(282): BannerController->run()
+#33 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#34 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/admin
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\views\banner\admin.php (65)
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (174)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:49:41 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (170)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:49:42 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (170)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 12:49:44 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (170)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 13:07:24 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (72)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 13:07:42 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (111)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/23 13:07:42 [error] [exception.CException] exception 'CException' with message 'Property "Banner.img_name" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('img_name', 'banner_13955512...')
+#1 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php(123): CActiveRecord->__set('img_name', 'banner_13955512...')
+#2 [internal function]: BannerController->actionUpdate('4')
+#3 D:\GitHub\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BannerController), Array)
+#4 D:\GitHub\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BannerController), Object(ReflectionMethod), Array)
+#5 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/banner/up...')
+#15 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/banner/update&id=4
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/banner/update&id=4
+---
+2014/03/23 13:09:07 [warning] [application] Failed to set unsafe attribute "banner_img" of "Banner".
+in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\BannerController.php (111)
+in D:\GitHub\yii\yii_cms\index.php (13)

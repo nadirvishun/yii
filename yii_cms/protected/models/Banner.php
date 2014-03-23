@@ -63,6 +63,7 @@ class Banner extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+				'statusName'=>array(self::BELONGS_TO,'Status','status_id'),
 		);
 	}
 
@@ -114,7 +115,7 @@ class Banner extends CActiveRecord
 	 */
 	public function beforeSave()
 	{
-		if (parent::beforSave()){
+		if (parent::beforeSave()){
 			if($this->isNewRecord){
 				$this->create_time=$this->update_time=date('Y-m-d H:i:s');
 				$this->create_user_id=$this->update_user_id=Yii::app()->user->id;
