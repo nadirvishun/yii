@@ -17,7 +17,7 @@
 class User extends CActiveRecord
 {
 	public $passwordAgain;
-	
+	public $passwordOld;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -53,6 +53,8 @@ class User extends CActiveRecord
 			array('password', 'length', 'max'=>32),
 			array('realname', 'length', 'max'=>6),
 			array('create_user_id, update_user_id', 'length', 'max'=>10),
+				
+			array('passwordOld', 'required', 'on'=>'updatePass'),
 			array('status_id, passwordAgain, passwordOld', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

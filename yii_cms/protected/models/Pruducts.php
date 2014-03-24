@@ -47,7 +47,7 @@ class Pruducts extends CActiveRecord
 			array('pruducts_name, pruducts_img', 'required'),
 			array('status_id', 'numerical', 'integerOnly'=>true),
 			array('pruducts_name, pruducts_img, hit', 'length', 'max'=>255),
-			array('type_id, create_user_id, update_user_id', 'length', 'max'=>10),
+// 			array('type_id, create_user_id, update_user_id', 'length', 'max'=>10),
 			array('pruducts_content,type_id,status_id','safe'),
 			array('pruducts_img', 'file', 'types'=>'jpg,gif,png', 'on'=>'create'),
 			array('pruducts_img', 'file', 'allowEmpty'=>true, 'types'=>'jpg,gif,png'),

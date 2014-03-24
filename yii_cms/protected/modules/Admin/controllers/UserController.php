@@ -27,16 +27,16 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
+// 			array('allow',  // allow all users to perform 'index' and 'view' actions
+// 				'actions'=>array('index','view'),
+// 				'users'=>array('*'),
+// 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','view','admin','updatePass','index'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -102,7 +102,39 @@ class UserController extends Controller
 			'model'=>$model,
 		));
 	}
-
+	/**
+	 * 设置只能修改本登录账号的密码。
+	 * @param unknown $id
+	 */
+	public function actionUpdatePass($id)
+	{
+	
+		$model=$this->loadModel($id);
+		$model->setScenario('updatePass');//设置场景
+		$tmpOldPassword = $model->password;//设置临时旧密码
+		$model->unsetAttributes(array('passwordOld','password','passwordAgain'));//清除所有的值
+	
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+	
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			if ($tmpOldPassword != User::model()->encrypt($model->passwordOld)){
+				$model->addError('passwordOld', 'Old Password is not Right!!');
+				//check Old Password, if not pair throw a error
+			}else {
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->id));
+			}}
+	
+			$this->render('updatepass',array(//转到updatepass视图
+					'model'=>$model,
+			));
+				
+	}
+	
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
