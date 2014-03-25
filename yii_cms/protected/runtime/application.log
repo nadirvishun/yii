@@ -1601,3 +1601,112 @@ HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php
 2014/03/25 15:25:10 [warning] [application] Failed to set unsafe attribute "verifyCode" of "LoginForm".
 in D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php (92)
 in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/25 20:26:17 [error] [php] Undefined variable: layout (E:\Github\yii\yii_cms\protected\modules\Admin\AdminModule.php:15)
+Stack trace:
+#0 E:\Github\yii\framework\base\CModule.php(282): createComponent()
+#1 E:\Github\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#2 E:\Github\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\Github\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/pruducts/admin
+in E:\Github\yii\yii_cms\protected\modules\Admin\AdminModule.php (15)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/25 20:35:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('logout')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/logout
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin
+---
+2014/03/25 20:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('logout')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/logout
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=Admin
+---
+2014/03/25 20:36:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('logout')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/logout
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/logout
+---
+2014/03/25 20:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/login
+---
+2014/03/25 20:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---
+2014/03/25 20:37:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('contact')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('contact')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contact')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/contact
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---
+2014/03/25 21:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---
+2014/03/25 21:21:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---
+2014/03/25 21:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\Github\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\Github\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 E:\Github\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 E:\Github\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 E:\Github\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\Github\yii\yii_cms\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/e/Github/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
+---

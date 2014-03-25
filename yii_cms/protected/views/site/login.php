@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
-	'focus'=>array($model,'username'),
+// 	'focus'=>array($model,'username'),
 	),
 )); ?>
 
