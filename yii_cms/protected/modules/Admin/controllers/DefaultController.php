@@ -41,11 +41,16 @@ class DefaultController extends Controller
 	{
 		$this->render('index');
 	}
-	public function actionLogout()
-	{
-	    Yii::app()->user->logout();
-		  $this->redirect(array('/Admin'));
-	}
+// /**
+// 	 * Logs out the current user and redirect to homepage.
+// 	 */
+// 	public function actionLogout()
+// 	{
+// 		Yii::app()->user->logout();
+// 		$this->redirect(Yii::app()->homeUrl);
+// // 		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
+
+// 	}
 
 	
 }

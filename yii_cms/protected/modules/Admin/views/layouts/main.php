@@ -29,8 +29,9 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'后台', 'url'=>array('/Admin/default/index')),
 				array('label'=>'前台', 'url'=>array('/')),
+				array('label'=>'后台', 'url'=>array('/Admin/default/index')),
+				
 // 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'登录', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'登出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
