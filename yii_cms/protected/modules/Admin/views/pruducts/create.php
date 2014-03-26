@@ -3,16 +3,16 @@
 /* @var $model Pruducts */
 
 $this->breadcrumbs=array(
-	'Pruducts'=>array('index'),
-	'Create',
+	'产品',
+	'添加',
 );
 
 $this->menu=array(
-	array('label'=>'List Pruducts', 'url'=>array('index')),
-	array('label'=>'Manage Pruducts', 'url'=>array('admin')),
+// 	array('label'=>'List Pruducts', 'url'=>array('index')),
+// 	array('label'=>'Manage Pruducts', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Pruducts</h1>
+<h2 style="color:#f67600">添加产品</h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

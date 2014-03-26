@@ -84,6 +84,7 @@ class User extends CActiveRecord
 			'username' => '用户名',
 			'password' => '密码',
 			'passwordAgain' => '再次输入密码',
+			'passwordOld'=>'旧密码',
 			'realname' => '真实姓名',
 			'create_time' => '创建时间',
 			'update_time' => '更新时间',

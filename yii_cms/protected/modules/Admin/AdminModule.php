@@ -12,7 +12,7 @@ class AdminModule extends CWebModule
 			'Admin.models.*',
 			'Admin.components.*',
 		));
-		$this->layout='column2';
+// 		$this->layout='column2';
 	}
 
 	public function beforeControllerAction($controller, $action)

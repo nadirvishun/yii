@@ -32,7 +32,7 @@ class BannerController extends Controller
 // 				'users'=>array('*'),
 // 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','index','view','admin','delete'),
+				'actions'=>array('create','update','view','admin','delete'),
 				'users'=>array('@'),
 			),
 // 			array('allow', // allow admin user to perform 'admin' and 'delete' actions

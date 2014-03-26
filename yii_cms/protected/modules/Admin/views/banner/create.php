@@ -3,16 +3,16 @@
 /* @var $model Banner */
 
 $this->breadcrumbs=array(
-	'Banners'=>array('index'),
-	'Create',
+	'轮播图片',
+	'添加',
 );
 
 $this->menu=array(
-	array('label'=>'List Banner', 'url'=>array('index')),
-	array('label'=>'Manage Banner', 'url'=>array('admin')),
+// 	array('label'=>'List Banner', 'url'=>array('index')),
+// 	array('label'=>'Manage Banner', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Banner</h1>
+<h2 style="color:#f67600">添加轮播图片</h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

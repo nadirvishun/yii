@@ -3,19 +3,19 @@
 /* @var $model Banner */
 
 $this->breadcrumbs=array(
-	'Banners'=>array('index'),
+	'轮播图片',
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'更新',
 );
 
 $this->menu=array(
-	array('label'=>'List Banner', 'url'=>array('index')),
-	array('label'=>'Create Banner', 'url'=>array('create')),
-	array('label'=>'View Banner', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Banner', 'url'=>array('admin')),
+// 	array('label'=>'List Banner', 'url'=>array('index')),
+// 	array('label'=>'Create Banner', 'url'=>array('create')),
+// 	array('label'=>'View Banner', 'url'=>array('view', 'id'=>$model->id)),
+// 	array('label'=>'Manage Banner', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Banner <?php echo $model->id; ?></h1>
+<h2 style="color:#f67600">更新轮播图片#<?php echo $model->id; ?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

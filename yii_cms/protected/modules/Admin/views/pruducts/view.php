@@ -3,20 +3,20 @@
 /* @var $model Pruducts */
 
 $this->breadcrumbs=array(
-	'Pruducts'=>array('index'),
-	$model->id,
+	'产品',
+	$model->pruducts_name,
 );
 
 $this->menu=array(
-	array('label'=>'List Pruducts', 'url'=>array('index')),
-	array('label'=>'Create Pruducts', 'url'=>array('create')),
-	array('label'=>'Update Pruducts', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Pruducts', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Pruducts', 'url'=>array('admin')),
+// 	array('label'=>'List Pruducts', 'url'=>array('index')),
+// 	array('label'=>'Create Pruducts', 'url'=>array('create')),
+// 	array('label'=>'Update Pruducts', 'url'=>array('update', 'id'=>$model->id)),
+// 	array('label'=>'Delete Pruducts', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+// 	array('label'=>'Manage Pruducts', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Pruducts #<?php echo $model->id; ?></h1>
+<h2 style="color:#f67600">产品 "<?php echo $model->pruducts_name; ?>"的信息</h2>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

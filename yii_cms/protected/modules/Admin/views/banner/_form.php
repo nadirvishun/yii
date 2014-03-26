@@ -12,7 +12,7 @@
 	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">带 <span class="required">*</span>必填</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -49,7 +49,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '添加' : '更新'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
