@@ -115,11 +115,11 @@
 		<!------- banner content end ----------->
         </div>
         <!--------------红色框 end------------------>
-        <!------------ banner end --------------->
+        <!--------------- banner end ---------------->
         
-        <!-- 产品类型分为3类 -->
+        <!--------------产品类型+滚动+联系方式----------------->
         <div class="center_content">  
-        
+        <!-- first begin -->
         <div class="home_section_left">
             <img src="images/icon1.gif" alt="" title="" class="home_section_icon" border="0">
                             
@@ -138,8 +138,9 @@
                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
         <div class="clear"></div>
         </div>
+        <!-- first end -->
         
-        
+        <!-- second begin -->
         <div class="home_section_left">
             <img src="images/icon2.gif" alt="" title="" class="home_section_icon" border="0">
                             
@@ -158,7 +159,9 @@
                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
         <div class="clear"></div>
         </div>
+        <!-- second end -->
         
+        <!-- third begin -->
         <div class="home_section_left">
             <img src="images/icon3.gif" alt="" title="" class="home_section_icon" border="0">
                             
@@ -177,37 +180,36 @@
                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
         <div class="clear"></div>
         </div>
+        <!-- third end -->
         
-            
-            <div class="left_block_wide">
-                <h2>Latest Projects</h2>
+        <!-- 产品滚动 -->    
+        <div class="left_block_wide">
+            <h2>Latest Projects</h2>
                 
-                <a href="#"><img src="images/p1.jpg" alt="" title="" border="0" class="projects" /></a>
-                <a href="#"><img src="images/p2.jpg" alt="" title="" border="0" class="projects" /></a>
-                <a href="#"><img src="images/p3.jpg" alt="" title="" border="0" class="projects" /></a>
-            
-            
-            </div>
-            
-            <div class="right_block">
-            	<h2>Newsletter Sign up</h2>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit consequat.
-                </p>
-                <form id="newsletter">
-                <input type="text" name="" class="newsletter_input" />
-                <input type="submit" name="" class="newsletter_submit" value="Sign up" />
-                </form>
-            
-            </div>
+            <a href="#"><img src="images/p1.jpg" alt="" title="" border="0" class="projects" /></a>
+            <a href="#"><img src="images/p2.jpg" alt="" title="" border="0" class="projects" /></a>
+            <a href="#"><img src="images/p3.jpg" alt="" title="" border="0" class="projects" /></a>
+        </div>
+        <!-- 产品滚动end -->  
         
-        
-        
-   
-        
+        <!-- 联系方式 -->  
+        <div class="right_block">
+        	<h2>Newsletter Sign up</h2>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit consequat.
+            </p>
+            <form id="newsletter">
+ 	           <input type="text" name="" class="newsletter_input" />
+    	        <input type="submit" name="" class="newsletter_submit" value="Sign up" />
+            </form>
+        </div>
+        <!-- 联系方式end -->
+      
         <div class="clear"></div>
         </div>
+        <!-- 中间内容end -->
         
+        <!-- footer begin -->
         <div class="footer">
         	<div class="copyright"><a href="http://csstemplatesmarket.com/" target="_blank">Free CSS Templates</a> | <a href="http://csstemplatesmarket.com/" target="_blank">by CssTemplatesMarket</a></div>
         
@@ -220,10 +222,10 @@
                 <a href="contact.html" title="">Contact</a>            
             </div>
         </div>
-      
-      
-    
+       <!-- footer end -->
+     
     </div>
+	<!-- 整个主体页面end -->
 </div>
 </body>
 <!-- body end -->

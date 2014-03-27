@@ -47,6 +47,8 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'pruducts_type_name',
+// 		'pruducts_type_img',
+		array('name'=>'pruducts_type_img','type'=>'raw','value'=>'CHtml::image(Yii::app()->baseUrl."/upload/pruducts_type_img/".$data->pruducts_type_img,"",array("width"=>"300px"))', 'filter'=>false),
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -12,6 +12,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pruducts_type_name')); ?>:</b>
 	<?php echo CHtml::encode($data->pruducts_type_name); ?>
 	<br />
-
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pruducts_type_img')); ?>:</b>
+	<?php echo CHtml::encode($data->pruducts_type_img); ?>
+	<br />
 
 </div>

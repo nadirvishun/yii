@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2014 at 10:14 PM
+-- Generation Time: Mar 27, 2014 at 10:30 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -110,16 +110,18 @@ INSERT INTO `yii_cms_pruducts` (`id`, `pruducts_name`, `pruducts_img`, `pruducts
 CREATE TABLE IF NOT EXISTS `yii_cms_pruducts_type` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pruducts_type_name` char(60) NOT NULL,
+  `pruducts_type_img` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `yii_cms_pruducts_type`
 --
 
-INSERT INTO `yii_cms_pruducts_type` (`id`, `pruducts_type_name`) VALUES
-(1, '钢管'),
-(2, '锌锭');
+INSERT INTO `yii_cms_pruducts_type` (`id`, `pruducts_type_name`, `pruducts_type_img`) VALUES
+(1, '钢管', 'pruducts_type_1395929409.jpg'),
+(2, '锌锭', 'pruducts_type_1395929384.jpg'),
+(3, '有色金属', 'pruducts_type_1395929273.jpg');
 
 -- --------------------------------------------------------
 
@@ -166,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `yii_cms_user` (
 
 INSERT INTO `yii_cms_user` (`id`, `username`, `password`, `realname`, `create_time`, `update_time`, `create_user_id`, `update_user_id`, `status_id`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '黑', '2014-03-15 20:20:58', '2014-03-15 20:20:58', 1, 1, 1),
-(2, 'vishun', 'e10adc3949ba59abbe56e057f20f883e', '黑', '2014-03-22 23:08:10', '2014-03-22 23:08:10', 1, 1, 1);
+(2, 'vishun', 'e10adc3949ba59abbe56e057f20f883e', '黑', '2014-03-22 23:08:10', '2014-03-24 21:16:34', 1, 1, 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

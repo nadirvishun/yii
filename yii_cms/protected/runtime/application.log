@@ -1990,3 +1990,42 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=Admin/user
 ---
+2014/03/27 21:59:39 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 21:59:55 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:00:07 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:00:13 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:00:47 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:05:51 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:06:33 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:07:20 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:07:24 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:07:41 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:07:53 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (72)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:09:44 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (115)
+in E:\Github\yii\yii_cms\index.php (13)
+2014/03/27 22:10:09 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (115)
+in E:\Github\yii\yii_cms\index.php (13)

@@ -21,6 +21,11 @@
 		<?php echo $form->textField($model,'pruducts_type_name',array('size'=>60,'maxlength'=>60)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'pruducts_type_img'); ?>
+		<?php echo $form->textField($model,'pruducts_type_img',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
