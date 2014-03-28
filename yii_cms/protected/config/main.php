@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'YII CMS',
+	'defaultController'=>'fontEnd',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -38,7 +39,10 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-
+// 			//cache
+// 			'cache'=>array(
+// 					'class'=>'system.caching.CFileCache',
+// 			),
 				
 		),
 		// uncomment the following to enable URLs in path-format

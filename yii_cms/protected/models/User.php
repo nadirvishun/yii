@@ -150,7 +150,9 @@ class User extends CActiveRecord
 	 */
 	public function validatePassword($password)
 	{
-		return $this->encrypt($password)===$this->password;
+		
+			return $this->encrypt($password)===$this->password;
+		
 	}
 	/**
 	 * md5方式加密

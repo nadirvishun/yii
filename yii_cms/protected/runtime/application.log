@@ -2029,3 +2029,361 @@ in E:\Github\yii\yii_cms\index.php (13)
 2014/03/27 22:10:09 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
 in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (115)
 in E:\Github\yii\yii_cms\index.php (13)
+2014/03/28 09:52:04 [error] [exception.CException] exception 'CException' with message 'Property "PruductsType.pruducts_type_img" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('pruducts_type_i...')
+#1 D:\GitHub\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('pruducts_type_i...')
+#2 D:\GitHub\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(PruductsType), 'pruducts_type_i...')
+#3 D:\GitHub\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(PruductsType), 'pruducts_type_i...', Array)
+#4 D:\GitHub\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(PruductsType), 'pruducts_type_i...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\_search.php(26): CActiveForm->textField(Object(PruductsType), 'pruducts_type_i...', Array)
+#6 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#7 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#8 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#9 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\admin.php(40): CController->renderPartial('_search', Array)
+#10 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#11 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#12 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#13 D:\GitHub\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php(177): CController->render('admin', Array)
+#15 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): PruductsTypeController->actionAdmin()
+#16 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/pruductst...')
+#26 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/pruductstype/admin
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/pruductstype/create
+---
+2014/03/28 09:52:10 [error] [exception.CException] exception 'CException' with message 'Property "PruductsType.pruducts_type_img" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('pruducts_type_i...')
+#1 D:\GitHub\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('pruducts_type_i...')
+#2 D:\GitHub\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(PruductsType), 'pruducts_type_i...')
+#3 D:\GitHub\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(PruductsType), 'pruducts_type_i...', Array)
+#4 D:\GitHub\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(PruductsType), 'pruducts_type_i...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\_search.php(26): CActiveForm->textField(Object(PruductsType), 'pruducts_type_i...', Array)
+#6 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#7 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#8 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#9 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\admin.php(40): CController->renderPartial('_search', Array)
+#10 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#11 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#12 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#13 D:\GitHub\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php(177): CController->render('admin', Array)
+#15 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): PruductsTypeController->actionAdmin()
+#16 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/pruductst...')
+#26 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/pruductstype/admin
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/pruductstype/create
+---
+2014/03/28 09:53:09 [error] [exception.CException] exception 'CException' with message 'Property "PruductsType.pruducts_type_img" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('pruducts_type_i...')
+#1 D:\GitHub\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('pruducts_type_i...')
+#2 D:\GitHub\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(PruductsType), 'pruducts_type_i...')
+#3 D:\GitHub\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(PruductsType), 'pruducts_type_i...', Array)
+#4 D:\GitHub\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(PruductsType), 'pruducts_type_i...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\_search.php(26): CActiveForm->textField(Object(PruductsType), 'pruducts_type_i...', Array)
+#6 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#7 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#8 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#9 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\admin.php(40): CController->renderPartial('_search', Array)
+#10 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#11 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#12 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#13 D:\GitHub\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php(177): CController->render('admin', Array)
+#15 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): PruductsTypeController->actionAdmin()
+#16 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/pruductst...')
+#26 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/pruductstype/admin
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/pruductstype/create
+---
+2014/03/28 09:53:19 [error] [exception.CException] exception 'CException' with message 'Property "PruductsType.pruducts_type_img" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('pruducts_type_i...')
+#1 D:\GitHub\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('pruducts_type_i...')
+#2 D:\GitHub\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(PruductsType), 'pruducts_type_i...')
+#3 D:\GitHub\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(PruductsType), 'pruducts_type_i...', Array)
+#4 D:\GitHub\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(PruductsType), 'pruducts_type_i...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\_search.php(26): CActiveForm->textField(Object(PruductsType), 'pruducts_type_i...', Array)
+#6 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#7 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#8 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#9 D:\GitHub\yii\yii_cms\protected\modules\Admin\views\pruductsType\admin.php(40): CController->renderPartial('_search', Array)
+#10 D:\GitHub\yii\framework\web\CBaseController.php(126): require('D:\GitHub\yii\y...')
+#11 D:\GitHub\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\GitHub\yii\y...', Array, true)
+#12 D:\GitHub\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\GitHub\yii\y...', Array, true)
+#13 D:\GitHub\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php(177): CController->render('admin', Array)
+#15 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): PruductsTypeController->actionAdmin()
+#16 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\GitHub\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 D:\GitHub\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/pruductst...')
+#26 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/pruductstype/admin
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/banner/admin
+---
+2014/03/28 11:20:28 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.cache" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\web\auth\CWebUser.php(154): CComponent->__set('cache', Array)
+#1 D:\GitHub\yii\framework\YiiBase.php(220): CWebUser->__set('cache', Array)
+#2 D:\GitHub\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#3 D:\GitHub\yii\framework\web\CWebApplication.php(209): CModule->getComponent('user')
+#4 D:\GitHub\yii\framework\web\auth\CAccessControlFilter.php(129): CWebApplication->getUser()
+#5 D:\GitHub\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#6 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/')
+#13 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/
+---
+2014/03/28 11:21:28 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.cache" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\web\auth\CWebUser.php(154): CComponent->__set('cache', Array)
+#1 D:\GitHub\yii\framework\YiiBase.php(220): CWebUser->__set('cache', Array)
+#2 D:\GitHub\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#3 D:\GitHub\yii\framework\web\CWebApplication.php(209): CModule->getComponent('user')
+#4 D:\GitHub\yii\framework\web\auth\CAccessControlFilter.php(129): CWebApplication->getUser()
+#5 D:\GitHub\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#6 D:\GitHub\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 D:\GitHub\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\GitHub\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\GitHub\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Admin/')
+#13 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=Admin/
+---
+2014/03/28 12:15:19 [error] [php] Undefined variable: status_id (D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php:37)
+Stack trace:
+#0 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 D:\GitHub\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): LoginForm->validate()
+#3 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\GitHub\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\GitHub\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\GitHub\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+in D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php (37)
+in D:\GitHub\yii\yii_cms\protected\models\LoginForm.php (58)
+in D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php (96)
+2014/03/28 12:16:13 [error] [php] Undefined offset: 1 (D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php:455)
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1402): User->query()
+#1 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): User->find()
+#2 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#3 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#4 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#5 D:\GitHub\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#6 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): LoginForm->validate()
+#7 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\GitHub\yii\framework\web\CController.php(286): SiteController->runAction()
+#10 D:\GitHub\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 D:\GitHub\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#12 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+in D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php (37)
+in D:\GitHub\yii\yii_cms\protected\models\LoginForm.php (58)
+in D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php (96)
+2014/03/28 12:16:38 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `yii_cms_user` `t` WHERE LOWER(username)=? LIMIT 1.
+in D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php (37)
+in D:\GitHub\yii\yii_cms\protected\models\LoginForm.php (58)
+in D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php (96)
+2014/03/28 12:16:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `yii_cms_user` `t` WHERE LOWER(username)=? LIMIT 1' in D:\GitHub\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\GitHub\yii\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): CActiveRecord->find('LOWER(username)...', Array)
+#4 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#5 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 D:\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): CModel->validate()
+#9 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=site/login
+---
+2014/03/28 12:19:08 [error] [php] Undefined offset: 1 (D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php:455)
+Stack trace:
+#0 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1402): User->query()
+#1 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): User->find()
+#2 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#3 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#4 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#5 D:\GitHub\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#6 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): LoginForm->validate()
+#7 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\GitHub\yii\framework\web\CController.php(286): SiteController->runAction()
+#10 D:\GitHub\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 D:\GitHub\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#12 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+in D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php (37)
+in D:\GitHub\yii\yii_cms\protected\models\LoginForm.php (58)
+in D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php (96)
+2014/03/28 12:22:48 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'admin')
+#1 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(558): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), 'LOWER(username)...', Array, Array, '`t`.')
+#4 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): CActiveRecord->findByAttributes('LOWER(username)...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#6 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#7 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#8 D:\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#9 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): CModel->validate()
+#10 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=site/login
+---
+2014/03/28 12:24:13 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'admin')
+#1 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(558): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), 'LOWER(username)...', Array, Array, '`t`.')
+#4 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): CActiveRecord->findByAttributes('LOWER(username)...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#6 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#7 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#8 D:\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#9 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): CModel->validate()
+#10 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=site/login
+---
+2014/03/28 12:24:24 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', '$username')
+#1 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(558): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), 'LOWER(username)...', Array, Array, '`t`.')
+#4 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): CActiveRecord->findByAttributes('LOWER(username)...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#6 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#7 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#8 D:\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#9 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): CModel->validate()
+#10 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=site/login
+---
+2014/03/28 12:24:26 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in D:\GitHub\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\GitHub\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', '$username')
+#1 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 D:\GitHub\yii\framework\db\schema\CDbCommandBuilder.php(558): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), 'LOWER(username)...', Array, Array, '`t`.')
+#4 D:\GitHub\yii\yii_cms\protected\components\UserIdentity.php(37): CActiveRecord->findByAttributes('LOWER(username)...', Array)
+#5 D:\GitHub\yii\yii_cms\protected\models\LoginForm.php(58): UserIdentity->authenticate()
+#6 D:\GitHub\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#7 D:\GitHub\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#8 D:\GitHub\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#9 D:\GitHub\yii\yii_cms\protected\controllers\SiteController.php(96): CModel->validate()
+#10 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php?r=site/login
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=site/login
+---
