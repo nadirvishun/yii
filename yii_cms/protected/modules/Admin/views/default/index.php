@@ -91,3 +91,26 @@ $this->breadcrumbs=array(
 <!--    <li>前台地址:<?php echo Yii::app()->homeUrl;?></li>
   <li>后台地址:<?php echo $this->createUrl('/Admin')?></li> -->
 <!-- </ol> -->
+
+
+
+<!-- 这是利用zii.widgets.jui.CJuiDialog的另一种弹窗方式，由于不能自动关闭，暂时不用 -->
+ <?php 
+// 		$this->beginWidget('zii.widgets.jui.CJuiDialog', array(   
+// 		'id'=>'mydialog',  
+// 		  // additional javascript options for the dialog plugin  
+// 		  'options'=>array(       
+// 			 'title'=>'提示',      
+// 			  'autoOpen'=>false,      
+// 			  'modal'=>'true',       
+// 			 'width'=>'auto',    
+// 			    'height'=>'auto',   
+// 			 ),
+// 			));
+// 			echo '缓存已成功删除';
+// 			$this->endWidget('zii.widgets.jui.CJuiDialog');
+// 			// the link that may open the dialog
+// // 			echo CHtml::link('点我吧','#',array(  
+// // 			 'onclick'=>'$("#mydialog").dialog("open"); return false;',
+// // 		)
+// // );?>

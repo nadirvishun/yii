@@ -22,8 +22,9 @@
 			$this->widget('PageMenu', array('htmlOptions'=>array('class'=>'operations'),));
 			
 			$this->widget('PruductsMenu', array('htmlOptions'=>array('class'=>'operations'),));
-			$this->widget('UserMenu', array('htmlOptions'=>array('class'=>'operations'),));
+			
 			$this->widget('CacheMenu', array('htmlOptions'=>array('class'=>'operations'),));
+			$this->widget('UserMenu', array('htmlOptions'=>array('class'=>'operations'),));
 // 			$this->widget('AdminUserMenu', array('htmlOptions'=>array('class'=>'operations'),));
 		?>
 	</div><!-- sidebar -->

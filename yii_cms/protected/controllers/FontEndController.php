@@ -16,10 +16,10 @@ class FontEndController extends Controller
 		//prepare Banner 
 		//1 Hour cache on it.
 		$cache = Yii::app()->cache;
-		$bannerResult = $cache->get('Banner');
-		if ($bannerResult === false){
-			$bannerResult = Banner::model()->findAll('status_id=1');
-			$cache->set('Banner', $bannerResult, 60*60);
+		$bannerResults = $cache->get('Banner');
+		if ($bannerResults === false){
+			$bannerResults = Banner::model()->findAll('status_id=1');
+			$cache->set('Banner', $bannerResults, 60*60);
 		}
 		
 	
@@ -69,7 +69,7 @@ class FontEndController extends Controller
 		$this->render('index',array(
 				'dataNav'=>$navResults,
 				'dataSecondNav'=>$productsTypeResults,
-				'dataBanner'=>$bannerResult,
+				'dataBanner'=>$bannerResults,
 // 				'dataGonggao'=>$indexGongGaoResults,
 // 				'dataNews'=>$indexNewsResults,
 				'dataPruductsTypeImg'=>$pruductsTypeImgResults,

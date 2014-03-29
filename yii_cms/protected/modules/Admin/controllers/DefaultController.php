@@ -52,65 +52,44 @@ class DefaultController extends Controller
 
 	}
 	/**
-	 * 删除缓存
+	 * 删除缓存(这是利用zii.widgets.jui.CJuiDialog的另一种弹窗方式，由于不能自动关闭，暂时不用)
 	 */
 	//delete Nav cache
-	public function actionDeleteNavCache()
-	{
-		Yii::app()->cache->delete('Nav');
-		
-		$this->beginWidget('zii.widgets.jui.CJuiDialog', array(
-				'id'=>'mydialog',//弹窗ID
-				// additional javascript options for the dialog plugin
-				'options'=>array(//传递给JUI插件的参数
-						'title'=>'弹窗标题',
-						'autoOpen'=>false,//是否自动打开
-						'width'=>'auto',//宽度
-						'height'=>'auto',//高度
-						'buttons'=>array(
-								'关闭'=>'js:function(){ $(this).dialog("close");}',//关闭按钮
-						),
-		
-				),
-		));
-		
-		echo 'dialog content here';
-		
-		$this->endWidget('zii.widgets.jui.CJuiDialog');
-		
-// 		// 这是弹窗链接,
-// 		echo CHtml::link('open dialog', '#', array(
-// 				'onclick'=>'$("#mydialog").dialog("open"); return false;',//点击打开弹窗
-// 		));
-		
-		
-		
-		
-		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
-	}
-	//delete  Banner cache
-	public function actionDeleteBannerCache()
-	{
-		Yii::app()->cache->delete('Banner');
-		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
-	}
-	//delete PruductsType cache
-	public function actionDeletePruductsTypeCache()
-	{
-		Yii::app()->cache->delete('PruductsType');
-		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
-	}
-	//delete Pruducts_type_img cache
-	public function actionDeletePruductsTypeImgCache()
-	{
-		Yii::app()->cache->delete('PruductsTypeImg');
-		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
-	}
-	//delete Pruducts
-	public function actionDeletePruductsCache()
-	{
-		Yii::app()->cache->delete('Pruducts');
-		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
-	}
+// 	public function actionDeleteNavCache()
+// 	{
+// 		Yii::app()->cache->delete('Nav');
+// 		Yii::app()->user->setFlash('success', '导航标签缓存已删除');
+// 		$this->render('index');
+	
+// 		// 		$this->redirect(Yii::app()->homeUrl.'?r=Admin/');
+// 	}
+// 	//delete  Banner cache
+// 	public function actionDeleteBannerCache()
+// 	{
+// 		Yii::app()->cache->delete('Banner');
+// 		Yii::app()->user->setFlash('success', '轮播图片缓存已删除');
+// 		$this->render('index');
+// 	}
+// 	//delete PruductsType cache
+// 	public function actionDeletePruductsTypeCache()
+// 	{
+// 		Yii::app()->cache->delete('PruductsType');
+// 		Yii::app()->user->setFlash('success', '产品类型二级缓存已删除');
+// 		$this->render('index');
+// 	}
+// 	//delete Pruducts_type_img cache
+// 	public function actionDeletePruductsTypeImgCache()
+// 	{
+// 		Yii::app()->cache->delete('PruductsTypeImg');
+// 		Yii::app()->user->setFlash('success', '产品类型图片缓存已删除');
+// 		$this->render('index');
+// 	}
+// 	//delete Pruducts
+// 	public function actionDeletePruductsCache()
+// 	{
+// 		Yii::app()->cache->delete('Pruducts');
+// 		Yii::app()->user->setFlash('success', '产品图片缓存已删除');
+// 		$this->render('index');
+// 	}
 	
 }
