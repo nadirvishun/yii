@@ -26,21 +26,21 @@ class FontEndController extends Controller
 		 
 		//PruductsType的二级菜单
 		//1 hour cache
-		$productsTypeResults = $cache->get('PruductsTypes');
+		$productsTypeResults = $cache->get('PruductsType');
 		if ($productsTypeResults === false){
 			$productsTypeResults = PruductsType::model()->getPruductsTypeList();
 // 			$newsTypeResults[998] = '下载';
-			$cache->set('PruductsTypes', $productsTypeResults, 60*60);
+			$cache->set('PruductsType', $productsTypeResults, 60*60);
 		}
 		
 		
 		//Pruducts_type_img
 		//1 hour cache
-		$pruductsTypeImgResults = $cache->get('PruductsTypesImg');
+		$pruductsTypeImgResults = $cache->get('PruductsTypeImg');
 		if ($pruductsTypeImgResults === false){
 			$pruductsTypeImgResults = PruductsType::model()->findAll();
 			// 			$newsTypeResults[998] = '下载';
-			$cache->set('PruductsTypesImg', $pruductsTypeImgResults, 60*60);
+			$cache->set('PruductsTypeImg', $pruductsTypeImgResults, 60*60);
 		}
 		
 		

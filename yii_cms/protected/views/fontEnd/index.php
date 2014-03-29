@@ -18,7 +18,7 @@
             	<ul> 
             	<?php if (!empty($dataNav)):?>
             		<?php foreach ($dataNav as $navItem):?>
-            			<li>
+            			<li><a class="current" href="<?php echo $navItem['nav_url']?>" title=""><?php echo $navItem['nav_title']?></a></li>
             		<?php endforeach;?>
               	<?php endif;?>
               	</ul> 

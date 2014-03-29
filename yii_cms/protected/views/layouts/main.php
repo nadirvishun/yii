@@ -5,7 +5,7 @@
 <!-- head begin -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Acalia Development | Free CSS Template | Csstemplatesmarket.com</title>
+<title>Yii CMS</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/css/style.css" media="screen" />
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/jquery.core.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/jquery.superfish.js"></script>
