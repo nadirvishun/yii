@@ -1,4 +1,38 @@
-
+	<!------------ 最顶部圆角显示 ---------------->
+    <div class="top_corner"></div>
+    
+    <!----------- 包含整个主体页面 --------------->
+    <div id="main_container">  
+     
+        <!-------- 包含logo和nav --------------->
+        <div id="header">
+        
+            <!----- logo begin ------>
+            <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+            <!----- logo end ------->
+            
+			<!-- <a href="make-a-donation.html" class="make_donation"></a> -->
+            
+            <!------ nav begin ------>
+            <div id="menu">
+            	<ul> 
+            	<?php if (!empty($dataNav)):?>
+            		<?php foreach ($dataNav as $navItem):?>
+            			<li>
+            		<?php endforeach;?>
+              	<?php endif;?>
+              	</ul> 
+<!--                 <ul>                                                                                             -->
+<!--                     <li><a class="current" href="index.html" title="">Home</a></li> -->
+<!--                     <li><a href="about.html" title="">About Company</a></li> -->
+<!--                     <li><a href="#" title="">Projects</a></li> -->
+<!--                     <li><a href="#" title="">Clients</a></li> -->
+<!--                     <li><a href="#" title="">Testimonials</a></li> -->
+<!--                     <li><a href="contact.html" title="">Contact</a></li> -->
+<!--                 </ul> -->
+            </div>
+            <!------ nav end --------->
+		</div>
 
         
         <!--------------- banner begin -------------------->
@@ -137,7 +171,9 @@
             </form>
         </div>
         <!-- 联系方式end -->
-      
+      <div class="clear"></div>
+        </div>
+        <!-- 中间内容end -->
      
         
        

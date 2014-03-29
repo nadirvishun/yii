@@ -9,53 +9,74 @@ class FontEndController extends Controller
 		$cache = Yii::app()->cache;
 		$navResults = $cache->get('Nav');
 		if ($navResults === false){
-			$navResults = Nav::model()->findAll('status_id = 1 limit 0, 6');
+			$navResults = Nav::model()->findAll('status_id = 1');
 			$cache->set('Nav', $navResults, 60*60);
 		}
 		 
-		//get one bg image name by random
-		//cache embed in function
-		$bgImageResults = BgImage::model()->getRandomBgImg();
-		 
-		//get second Nav Items as an Array
-		//1 hour cache
-		$newsTypeResults = $cache->get('NewsTypes');
-		if ($newsTypeResults === false){
-			$newsTypeResults = NewsType::model()->getNewsTypeList();
-			$newsTypeResults[998] = '下载';
-			$cache->set('NewsTypes', $newsTypeResults, 60*60);
+		//prepare Banner 
+		//1 Hour cache on it.
+		$cache = Yii::app()->cache;
+		$bannerResult = $cache->get('Banner');
+		if ($bannerResult === false){
+			$bannerResult = Banner::model()->findAll('status_id=1');
+			$cache->set('Banner', $bannerResult, 60*60);
 		}
+		
+	
+		 
+		//PruductsType的二级菜单
+		//1 hour cache
+		$productsTypeResults = $cache->get('PruductsTypes');
+		if ($productsTypeResults === false){
+			$productsTypeResults = PruductsType::model()->getPruductsTypeList();
+// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsTypes', $productsTypeResults, 60*60);
+		}
+		
+		
+		//Pruducts_type_img
+		//1 hour cache
+		$pruductsTypeImgResults = $cache->get('PruductsTypesImg');
+		if ($pruductsTypeImgResults === false){
+			$pruductsTypeImgResults = PruductsType::model()->findAll();
+			// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsTypesImg', $pruductsTypeImgResults, 60*60);
+		}
+		
+		
+		
 		 
 		//get gonggao contents
-		$indexGongGaoResults = News::model()->getLastNewsByType('1');
+// 		$indexGongGaoResults = News::model()->getLastNewsByType('1');
 		//get News contents
-		$indexNewsResults = News::model()->getLastNewsByType('2');
+// 		$indexNewsResults = News::model()->getLastNewsByType('2');
 		 
-		//get ImgLib data
+		//get pruducts_img data
 		//1 hour cache
-		$imgLibResults = $cache->get('IndexImageLib');
-		if ($imgLibResults === false){
-			$imgLibResults = ImgLib::model()->getLastImg();
-			$cache->set('IndexImageLib', $imgLibResults, 60*60);
+		$pruductsImgResults = $cache->get('Pruducts');
+		if ($pruductsImgResults === false){
+			$pruductsImgResults = Pruducts::model()->findAll('status_id=1 order by id DESC');
+			$cache->set('Pruducts', $pruductsImgResults, 60*60);
 		}
 		 
 		//get Download files
-		$downloadResults = Download::model()->getLastDownloadItems();
+// 		$downloadResults = Download::model()->getLastDownloadItems();
 		 
 		//test part
 		//	  echo '<pre>';
 		//	  print_r($downloadResults);
 		 
-		$this->render('siteindex',array(
-				'dataNavs'=>$navResults,
-				'dataSecondNavs'=>$newsTypeResults,
-				'dataBgImgName'=>$bgImageResults,
-				'dataGonggao'=>$indexGongGaoResults,
-				'dataNews'=>$indexNewsResults,
-				'dataImgLib'=>$imgLibResults,
-				'dataDownload'=>$downloadResults
+		$this->render('index',array(
+				'dataNav'=>$navResults,
+				'dataSecondNav'=>$productsTypeResults,
+				'dataBanner'=>$bannerResult,
+// 				'dataGonggao'=>$indexGongGaoResults,
+// 				'dataNews'=>$indexNewsResults,
+				'dataPruductsTypeImg'=>$pruductsTypeImgResults,
+				'dataPruductsImg'=>$pruductsImgResults,
+// 				'dataDownload'=>$downloadResults
 		));
-		$this->render('index');
+	
 	}
 
 	// Uncomment the following methods and override them if needed

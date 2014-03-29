@@ -2606,3 +2606,90 @@ Stack trace:
 REQUEST_URI=/e/Github/yii/yii_cms/index.php?r=site/login
 HTTP_REFERER=http://localhost/e/Github/yii/yii_cms/index.php?r=site/login
 ---
+2014/03/29 11:28:50 [error] [php] Undefined variable: bannerResult (D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php:22)
+Stack trace:
+#0 D:\GitHub\yii\framework\web\CController.php(286): FontEndController->runAction()
+#1 D:\GitHub\yii\framework\web\CController.php(265): FontEndController->runActionWithFilters()
+#2 D:\GitHub\yii\framework\web\CWebApplication.php(282): FontEndController->run()
+#3 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php
+in D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php (22)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/29 11:29:34 [error] [php] Undefined variable: bannerResult (D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php:22)
+Stack trace:
+#0 D:\GitHub\yii\framework\web\CController.php(286): FontEndController->runAction()
+#1 D:\GitHub\yii\framework\web\CController.php(265): FontEndController->runActionWithFilters()
+#2 D:\GitHub\yii\framework\web\CWebApplication.php(282): FontEndController->run()
+#3 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\GitHub\yii\yii_cms\index.php(13): CWebApplication->run()
+REQUEST_URI=/git/yii/yii_cms/index.php
+in D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php (22)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/29 11:29:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1.
+in D:\GitHub\yii\yii_cms\protected\models\PruductsType.php (96)
+in D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php (31)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/29 11:29:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1' in D:\GitHub\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\GitHub\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\GitHub\yii\yii_cms\protected\models\PruductsType.php(96): CActiveRecord->findAll('status_id=1')
+#4 D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php(31): PruductsType->getPruductsTypeList()
+#5 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): FontEndController->actionIndex()
+#6 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/
+---
+2014/03/29 11:35:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1.
+in D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php (41)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/29 11:35:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1' in D:\GitHub\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\GitHub\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php(41): CActiveRecord->findAll('status_id=1')
+#4 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): FontEndController->actionIndex()
+#5 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('')
+#9 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#10 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/
+---
+2014/03/29 11:35:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1.
+in D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php (41)
+in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/29 11:35:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `yii_cms_pruducts_type` `t` WHERE status_id=1' in D:\GitHub\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\GitHub\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\GitHub\yii\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\GitHub\yii\yii_cms\protected\controllers\FontEndController.php(41): CActiveRecord->findAll('status_id=1')
+#4 D:\GitHub\yii\framework\web\actions\CInlineAction.php(49): FontEndController->actionIndex()
+#5 D:\GitHub\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\GitHub\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\GitHub\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\GitHub\yii\framework\web\CWebApplication.php(282): CController->run('')
+#9 D:\GitHub\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#10 D:\GitHub\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\GitHub\yii\yii_cms\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/git/yii/yii_cms/index.php
+HTTP_REFERER=http://localhost/git/yii/yii_cms/index.php?r=Admin/
+---

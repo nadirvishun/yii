@@ -39,12 +39,13 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-// 			//cache
-// 			'cache'=>array(
-// 					'class'=>'system.caching.CFileCache',
-// 			),
+			),
+			//cache
+			'cache'=>array(
+					'class'=>'system.caching.CFileCache',
+			),
 				
-		),
+		
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

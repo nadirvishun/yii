@@ -17,40 +17,11 @@
 <!-- body begin -->
 <body>
 <div id="wrap">
-	<!------------ 最顶部圆角显示 ---------------->
-    <div class="top_corner"></div>
-    
-    <!----------- 包含整个主体页面 --------------->
-    <div id="main_container">  
-     
-        <!-------- 包含logo和nav --------------->
-        <div id="header">
-        
-            <!----- logo begin ------>
-            <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
-            <!----- logo end ------->
-            
-			<!-- <a href="make-a-donation.html" class="make_donation"></a> -->
-            
-            <!------ nav begin ------>
-            <div id="menu">
-                <ul>                                                                                            
-                    <li><a class="current" href="index.html" title="">Home</a></li>
-                    <li><a href="about.html" title="">About Company</a></li>
-                    <li><a href="#" title="">Projects</a></li>
-                    <li><a href="#" title="">Clients</a></li>
-                    <li><a href="#" title="">Testimonials</a></li>
-                    <li><a href="contact.html" title="">Contact</a></li>
-                </ul>
-            </div>
-            <!------ nav end --------->
-		</div>
+
 
 	<?php echo $content; ?>
 
-   <div class="clear"></div>
-        </div>
-        <!-- 中间内容end -->
+   
  <!-- footer begin -->
         <div class="footer">
         	<div class="copyright"><a href="http://csstemplatesmarket.com/" target="_blank">Free CSS Templates</a> | <a href="http://csstemplatesmarket.com/" target="_blank">by CssTemplatesMarket</a></div>
