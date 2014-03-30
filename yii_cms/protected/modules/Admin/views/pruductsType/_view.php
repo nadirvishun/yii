@@ -16,5 +16,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pruducts_type_img')); ?>:</b>
 	<?php echo CHtml::encode($data->pruducts_type_img); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pruducts_type_content')); ?>:</b>
+	<?php echo CHtml::encode($data->pruducts_type_content); ?>
+	<br />
 
 </div>

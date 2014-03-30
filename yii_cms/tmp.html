@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery图片无缝滚动js代码ul./li结构，可重用 - 技术教程网</title>
+<meta name="keywords" content="jquery特效,JS代码,js特效代码大全,js特效广告代码,导航菜单代码" />
+<meta name="description" content="技术教程网为您提供-JS代码，js特效代码大全，js特效广告代码，下拉菜单，下拉菜单代码，导航菜单代码和基于jquery的各种特效与jquery插件。" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+//滚动
+(function($){
+
+	$.fn.kxbdMarquee = function(options){
+		var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);
+		
+		return this.each(function(){
+			var $marquee = $(this);//滚动元素容器
+			var _scrollObj = $marquee.get(0);//滚动元素容器DOM
+			var scrollW = $marquee.width();//滚动元素容器的宽度
+			var scrollH = $marquee.height();//滚动元素容器的高度
+			var $element = $marquee.children(); //滚动元素
+			var $kids = $element.children();//滚动子元素
+			var scrollSize=0;//滚动元素尺寸
+			var _type = (opts.direction == 'left' || opts.direction == 'right') ? 1:0;//滚动类型，1左右，0上下
+
+			//防止滚动子元素比滚动元素宽而取不到实际滚动子元素宽度
+			$element.css(_type?'width':'height',10000);
+			//获取滚动元素的尺寸
+			if (opts.isEqual) {
+				scrollSize = $kids[_type?'outerWidth':'outerHeight']() * $kids.length;
+			}else{
+				$kids.each(function(){
+					scrollSize += $(this)[_type?'outerWidth':'outerHeight']();
+				});
+			}
+			//滚动元素总尺寸小于容器尺寸，不滚动
+			if (scrollSize<(_type?scrollW:scrollH)) return; 
+			//克隆滚动子元素将其插入到滚动元素后，并设定滚动元素宽度
+			$element.append($kids.clone()).css(_type?'width':'height',scrollSize*2);
+			
+			var numMoved = 0;
+			function scrollFunc(){
+				var _dir = (opts.direction == 'left' || opts.direction == 'right') ? 'scrollLeft':'scrollTop';
+				if (opts.loop > 0) {
+					numMoved+=opts.scrollAmount;
+					if(numMoved>scrollSize*opts.loop){
+						_scrollObj[_dir] = 0;
+						return clearInterval(moveId);
+					} 
+				}
+				if(opts.direction == 'left' || opts.direction == 'up'){
+					var newPos = _scrollObj[_dir] + opts.scrollAmount;
+					if(newPos>=scrollSize){
+						newPos -= scrollSize;
+					}
+					_scrollObj[_dir] = newPos;
+				}else{
+					var newPos = _scrollObj[_dir] - opts.scrollAmount;
+					if(newPos<=0){
+						newPos += scrollSize;
+					}
+					_scrollObj[_dir] = newPos;
+				}
+			};
+			//滚动开始
+			var moveId = setInterval(scrollFunc, opts.scrollDelay);
+			//鼠标划过停止滚动
+			$marquee.hover(
+				function(){
+					clearInterval(moveId);
+				},
+				function(){
+					clearInterval(moveId);
+					moveId = setInterval(scrollFunc, opts.scrollDelay);
+				}
+			);
+			
+			//控制加速运动
+			if(opts.controlBtn){
+				$.each(opts.controlBtn, function(i,val){
+					$(val).bind(opts.eventA,function(){
+						opts.direction = i;
+						opts.oldAmount = opts.scrollAmount;
+						opts.scrollAmount = opts.newAmount;
+					}).bind(opts.eventB,function(){
+						opts.scrollAmount = opts.oldAmount;
+					});
+				});
+			}
+		});
+	};
+	$.fn.kxbdMarquee.defaults = {
+		isEqual:true,//所有滚动的元素长宽是否相等,true,false
+		loop: 0,//循环滚动次数，0时无限
+		direction: 'left',//滚动方向，'left','right','up','down'
+		scrollAmount:1,//步长
+		scrollDelay:10,//时长
+		newAmount:3,//加速滚动的步长
+		eventA:'mousedown',//鼠标事件，加速
+		eventB:'mouseup'//鼠标事件，原速
+	};
+	
+	$.fn.kxbdMarquee.setDefaults = function(settings) {
+		$.extend( $.fn.kxbdMarquee.defaults, settings );
+	};
+	
+})(jQuery);
+
+</script>
+<style>
+a{ font-size:13px; color:#333333; text-decoration:none;}
+a:hover{color:red; text-decoration:underline;}
+img{ border:none;}
+
+.marquee {width:560px;height:260px;overflow:hidden;border:1px solid #333; margin-top:20px;}
+.marquee li{ display:inline; float:left; margin-right:12px;}
+.marquee li a{ width:230px; height:260px; display:block; float:left; text-align:center; font-size:14px;}
+.marquee li a:hove{ text-decoration:none;}
+.marquee li img {width:160px; height:160px;}
+.marquee li em{font-style: normal; height:24px; line-height:24px; display:block; margin-top:8px;}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.marquee').kxbdMarquee({
+			direction:'left',
+			eventA:'mouseenter',
+			eventB:'mouseleave'
+	});
+});
+</script> 
+            
+<div class="marquee"> 
+    <ul>
+        <li><a href="http://www.update8.com/effects/"><img src="demo/01.jpg"/><em>jquery 特效</em></a></li>
+        <li><a href="http://www.update8.com/effects/"><img src="demo/02.jpg"/><em>滚动代码</em></a></li>
+        <li><a href="http://www.update8.com/effects/nav/"><img src="demo/01.jpg"/><em>导航菜单</em></a></li>
+        <li><a href="http://www.update8.com/mb"><img src="demo/02.jpg"/><em>兼职网站大全</em></a></li>
+	</ul>
+</div> 
+<p>jquery图片无缝滚动js代码ul./li结构，可重用。</p>
+
+
+
+<!--下面只是说明与程序代码无关-->
+<div style="width:95%; height:auto; display:block; margin:0 auto; margin-top:30px; font-size:10pt; line-height:150%;">
+<span>本代码由<a href="http://www.update8.com" style="color:#F00;">技术教程网网 收集整理 我要学电脑.COM →update8.com</a> </span><br>
+<a href="http://www.update8.com/">技术教程网 http://www.update8.com/</a><br /><br/>
+
+<span> 、我们为您提供-
+<a href="http://www.update8.com/effects/">html+css</a>，
+<a href="http://www.update8.com/effects/">jquery特效</a>，
+<a href="http://www.update8.com/effects/">JS代码</a>，
+<a href="http://www.update8.com/effects/">网页特效</a>，
+<a href="http://www.update8.com/effects/nav/">导航菜单</a>，
+<a href="http://www.update8.com/effects/">焦点幻灯片</a>，
+</span> <br />
+<span>技术教程网只收录实用和能提高用户体验的代码</span><br />
+<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span>
+</div>
+<div style="width:728px;margin:10px auto; overflow:hidden;">
+<script src='/plus/ad_js.php?aid=10023' language='javascript'></script>
+</div>
+</body>
+</html>

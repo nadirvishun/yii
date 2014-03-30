@@ -68,8 +68,9 @@ class FontEndController extends Controller
 		 
 		$this->render('index',array(
 				'dataNav'=>$navResults,
-				'dataSecondNav'=>$productsTypeResults,
+				
 				'dataBanner'=>$bannerResults,
+				'dataSecondNav'=>$productsTypeResults,
 // 				'dataGonggao'=>$indexGongGaoResults,
 // 				'dataNews'=>$indexNewsResults,
 				'dataPruductsTypeImg'=>$pruductsTypeImgResults,

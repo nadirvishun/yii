@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2014 at 10:30 PM
+-- Generation Time: Mar 31, 2014 at 12:01 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -39,16 +39,17 @@ CREATE TABLE IF NOT EXISTS `yii_cms_banner` (
   `update_user_id` int(10) unsigned DEFAULT NULL,
   `status_id` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `yii_cms_banner`
 --
 
 INSERT INTO `yii_cms_banner` (`id`, `banner_url`, `banner_img`, `banner_title`, `create_time`, `update_time`, `create_user_id`, `update_user_id`, `status_id`) VALUES
-(1, 'http://www.163.com', 'banner_1395577631.jpg', 'jpg图片', '2014-03-23 20:27:11', '2014-03-23 20:39:30', 2, 1, 1),
-(2, 'https://github.com/nadirvishun', 'banner_1395578328.gif', 'gif图片', '2014-03-23 20:32:15', '2014-03-23 20:40:46', 1, 1, 1),
-(3, 'http://www.baidu.com', 'banner_1395578117.png', 'png图片', '2014-03-23 20:35:17', '2014-03-23 20:35:17', 1, 1, 1);
+(1, 'http://www.163.com', 'banner_1396103022.jpg', 'jpg图片', '2014-03-23 20:27:11', '2014-03-29 22:23:42', 2, 3, 1),
+(2, 'https://github.com/nadirvishun', 'banner_1396103061.gif', 'gif图片', '2014-03-23 20:32:15', '2014-03-29 22:24:21', 1, 3, 1),
+(3, 'http://www.baidu.com', 'banner_1396103190.png', 'png图片', '2014-03-23 20:35:17', '2014-03-29 22:26:30', 1, 3, 1),
+(4, '', 'banner_1396102189.jpg', '第四个', '2014-03-29 22:03:09', '2014-03-29 22:21:34', 3, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -62,14 +63,17 @@ CREATE TABLE IF NOT EXISTS `yii_cms_nav` (
   `nav_title` char(64) NOT NULL,
   `status_id` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `yii_cms_nav`
 --
 
 INSERT INTO `yii_cms_nav` (`id`, `nav_url`, `nav_title`, `status_id`) VALUES
-(1, 'http://www.baidu.com', '公司简介', 1);
+(1, 'http://www.baidu.com', ' 首页', 1),
+(2, '', '公司简介', 1),
+(3, '', '产品中心', 1),
+(4, '', '联系我们', 1);
 
 -- --------------------------------------------------------
 
@@ -111,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `yii_cms_pruducts_type` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pruducts_type_name` char(60) NOT NULL,
   `pruducts_type_img` char(255) NOT NULL,
+  `pruducts_type_content` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -118,10 +123,10 @@ CREATE TABLE IF NOT EXISTS `yii_cms_pruducts_type` (
 -- Dumping data for table `yii_cms_pruducts_type`
 --
 
-INSERT INTO `yii_cms_pruducts_type` (`id`, `pruducts_type_name`, `pruducts_type_img`) VALUES
-(1, '钢管', 'pruducts_type_1395929409.jpg'),
-(2, '锌锭', 'pruducts_type_1395929384.jpg'),
-(3, '有色金属', 'pruducts_type_1395929273.jpg');
+INSERT INTO `yii_cms_pruducts_type` (`id`, `pruducts_type_name`, `pruducts_type_img`, `pruducts_type_content`) VALUES
+(1, '钢管', 'pruducts_type_1395929409.jpg', '随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。'),
+(2, '锌锭', 'pruducts_type_1395929384.jpg', '么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。'),
+(3, '有色金属', 'pruducts_type_1395929273.jpg', '么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。随便写写，看下是什么结果啊。');
 
 -- --------------------------------------------------------
 
@@ -160,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `yii_cms_user` (
   `update_user_id` int(10) unsigned DEFAULT NULL,
   `status_id` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `yii_cms_user`
@@ -168,7 +173,8 @@ CREATE TABLE IF NOT EXISTS `yii_cms_user` (
 
 INSERT INTO `yii_cms_user` (`id`, `username`, `password`, `realname`, `create_time`, `update_time`, `create_user_id`, `update_user_id`, `status_id`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '黑', '2014-03-15 20:20:58', '2014-03-15 20:20:58', 1, 1, 1),
-(2, 'vishun', 'e10adc3949ba59abbe56e057f20f883e', '黑', '2014-03-22 23:08:10', '2014-03-24 21:16:34', 1, 1, 1);
+(2, 'vishun', 'e10adc3949ba59abbe56e057f20f883e', '黑', '2014-03-22 23:08:10', '2014-03-24 21:16:34', 1, 1, 1),
+(3, 'nadir', 'e10adc3949ba59abbe56e057f20f883e', '', '2014-03-28 21:00:16', '2014-03-28 21:48:03', 1, 3, 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

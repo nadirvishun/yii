@@ -24,5 +24,6 @@ $this->menu=array(
 		'id',
 		'pruducts_type_name',
 		'pruducts_type_img',
+		'pruducts_type_content',
 	),
 )); ?>

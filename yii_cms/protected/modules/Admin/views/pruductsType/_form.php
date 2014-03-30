@@ -27,7 +27,13 @@
 		<?php echo $form->fileField($model,'pruducts_type_img',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'pruducts_type_img'); ?>
 	</div>
-
+	
+	<div class="row">
+        <?php echo $form->labelEx($model,'pruducts_type_content'); ?>
+        <?php echo $form->textArea($model,'pruducts_type_content',array('rows'=>6, 'cols'=>50)); ?>
+        <?php echo $form->error($model,'pruducts_type_content'); ?>
+    </div>
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '更新'); ?>
 	</div>

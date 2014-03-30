@@ -39,6 +39,7 @@ class PruductsType extends CActiveRecord
 			array('pruducts_type_name','unique'),
 			array('pruducts_type_name', 'length', 'max'=>60),
 			array('pruducts_type_img', 'length', 'max'=>255),
+			array('pruducts_type_content','safe'),
 			array('pruducts_type_img', 'file', 'types'=>'jpg,gif,png', 'on'=>'create'),
 			array('pruducts_type_img', 'file', 'allowEmpty'=>true, 'types'=>'jpg,gif,png'),
 			// The following rule is used by search().
@@ -67,6 +68,7 @@ class PruductsType extends CActiveRecord
 			'id' => 'ID',
 			'pruducts_type_name' => '产品类别',
 			'pruducts_type_img'=>'类别图片',
+			'pruducts_type_content'=>'类别简介',
 		);
 	}
 

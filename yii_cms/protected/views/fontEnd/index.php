@@ -49,7 +49,7 @@
                <ul id="featured_images" class="jcarousel-list">
               	 <?php if (!empty($dataBanner)):?>
                		<?php foreach ($dataBanner as $BannerItem):?>
-               		 <li><a href="<?php echo $BannerItem['banner_url']?>"> <img src="<?php echo Yii::app()->baseUrl ?>/upload/banner_img/<?php echo $BannerItem['banner_img']?>" width="965" height="280" alt=""/></a></li>
+               		 <li> <img src="<?php echo Yii::app()->baseUrl ?>/upload/banner_img/<?php echo $BannerItem['banner_img']?>" width="965" height="280" alt=""/></li>
                		<!-- <li><img src="<?php echo Yii::app()->basePath.'/../upload/banner_img/'.$BannerItem['banner_img']?>" width="965" height="280" alt=""/></li> -->
                		<?php endforeach;?>
               	<?php endif;?>
@@ -65,7 +65,8 @@
                   <ul id="featured_desc" class="jcarousel-list">   
                   		<?php if(!empty($dataBanner)):?>
                   			<?php foreach ($dataBanner as $BannerItem):?>
-                  			<li><P><?php echo $BannerItem['banner_title']?></P></li>
+                  			<!--  <li><div><P><?php echo $BannerItem['banner_title']?></P></div></li>-->
+                  			<li><div><a href="<?php echo $BannerItem['banner_url']?>" target="_blank"><?php echo $BannerItem['banner_title']?></a></div></li>
                   			<?php endforeach;?>
                   		<?php endif;?>              
 <!--                      <li> -->
@@ -105,75 +106,116 @@
         <!--------------产品类型+滚动+联系方式----------------->
         <div class="center_content">  
         <!-- first begin -->
-        <div class="home_section_left">
-            <img src="images/icon1.gif" alt="" title="" class="home_section_icon" border="0">
+        	<?php if(!empty($dataPruductsTypeImg)):?>
+        		<?php $i=1;foreach ($dataPruductsTypeImg as $PruductsTypeImgItem):?>
+        			<div class="home_section_left">
+        			<img src="images/icon<?php echo $i?>.gif" alt="" title="" class="home_section_icon" border="0">
+        			<h2 class="home_title"><?php echo $PruductsTypeImgItem['pruducts_type_name']?></h2>
+        			<div class="home_section_thumb">
+        				<img src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_type_img/<?php echo $PruductsTypeImgItem['pruducts_type_img']?>"  width="265" height="77" alt="" title="" border="0">
+        			</div>
+        			
+        			<P><?php echo $PruductsTypeImgItem['pruducts_type_content']?></P>
+        			<!-- need change -->
+        			<a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
+        			<div class="clear"></div>
+        			</div>
+        			<?php $i++;?>
+        		<?php endforeach;?>
+        	<?php endif;?>
+<!--         <div class="home_section_left"> -->
+<!--             <img src="images/icon1.gif" alt="" title="" class="home_section_icon" border="0"> -->
                             
-                <h2 class="home_title">What we do</h2>
-                <div class="home_subtitle">Consectetur adipisicing elit</div>
+<!--                 <h2 class="home_title">What we do</h2> -->
+<!--                 <div class="home_subtitle">Consectetur adipisicing elit</div> -->
     
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb1.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
+<!--                 <div class="home_section_thumb"> -->
+<!--                 <img src="images/home_section_thumb1.jpg" alt="" title="" border="0"> -->
+<!--                 </div> -->
+<!--                 <p><span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 <br> <br> -->
+<!--                 <span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 </p> -->
+<!--                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a> -->
+<!--         <div class="clear"></div> -->
+<!--         </div> -->
         <!-- first end -->
         
         <!-- second begin -->
-        <div class="home_section_left">
-            <img src="images/icon2.gif" alt="" title="" class="home_section_icon" border="0">
+<!--         <div class="home_section_left"> -->
+<!--             <img src="images/icon2.gif" alt="" title="" class="home_section_icon" border="0"> -->
                             
-                <h2 class="home_title">Who we are</h2>
-                <div class="home_subtitle">Tempor incididunt ut labore</div>
+<!--                 <h2 class="home_title">Who we are</h2> -->
+<!--                 <div class="home_subtitle">Tempor incididunt ut labore</div> -->
     
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb2.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
+<!--                 <div class="home_section_thumb"> -->
+<!--                 <img src="images/home_section_thumb2.jpg" alt="" title="" border="0"> -->
+<!--                 </div> -->
+<!--                 <p><span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 <br> <br> -->
+<!--                 <span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 </p> -->
+<!--                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a> -->
+<!--         <div class="clear"></div> -->
+<!--         </div> -->
         <!-- second end -->
         
         <!-- third begin -->
-        <div class="home_section_left">
-            <img src="images/icon3.gif" alt="" title="" class="home_section_icon" border="0">
+<!--         <div class="home_section_left"> -->
+<!--             <img src="images/icon3.gif" alt="" title="" class="home_section_icon" border="0"> -->
                             
-                <h2 class="home_title">Special services</h2>
-                <div class="home_subtitle">Sed do eiusmod tempor</div>
+<!--                 <h2 class="home_title">Special services</h2> -->
+<!--                 <div class="home_subtitle">Sed do eiusmod tempor</div> -->
     
-                <div class="home_section_thumb">
-                <img src="images/home_section_thumb3.jpg" alt="" title="" border="0">
-                </div>
-                <p><span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                <br> <br>
-                <span>Lorem ipsum dolor sit ame</span><br>
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. 
-                </p>
-                <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a>
-        <div class="clear"></div>
-        </div>
+<!--                 <div class="home_section_thumb"> -->
+<!--                 <img src="images/home_section_thumb3.jpg" alt="" title="" border="0"> -->
+<!--                 </div> -->
+<!--                 <p><span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 <br> <br> -->
+<!--                 <span>Lorem ipsum dolor sit ame</span><br> -->
+<!--                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.  -->
+<!--                 </p> -->
+<!--                 <a href="" class="more"><img src="images/more.gif" alt="" title="" border="0"></a> -->
+<!--         <div class="clear"></div> -->
+<!--         </div> -->
         <!-- third end -->
         
-        <!-- 产品滚动 -->    
+        <!-- 产品滚动 -->   
+
+     <script type="text/javascript">
+   var jq=$.noConflict();
+jq(document).ready(function(){
+	jq('.marquee').kxbdMarquee({
+			direction:'left',
+			eventA:'mouseenter',
+			eventB:'mouseleave'
+	});
+});
+</script> 
         <div class="left_block_wide">
-            <h2>Latest Projects</h2>
+            <h2>产品中心</h2>
+            <div class="marquee"> 
+    		 <ul>
+    			<?php if(!empty($dataPruductsImg)):?>
+    				<?php foreach ($dataPruductsImg as $PruductsImgItem):?>
+    					<li><a href=""><img src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_img/<?php echo $PruductsImgItem['pruducts_img']?>"/><em><?php echo $PruductsImgItem['pruducts_name']?></em></a></li>
+    				<?php endforeach;?>
+    			<?php endif;?>
+<!--        			 <li><a href="http://www.update8.com/effects/"><img src="demo/01.jpg"/><em>jquery 特效</em></a></li> -->
+<!--       			  <li><a href="http://www.update8.com/effects/"><img src="demo/02.jpg"/><em>滚动代码</em></a></li> -->
+<!--       			  <li><a href="http://www.update8.com/effects/nav/"><img src="demo/01.jpg"/><em>导航菜单</em></a></li> -->
+<!--       			  <li><a href="http://www.update8.com/mb"><img src="demo/02.jpg"/><em>兼职网站大全</em></a></li> -->
+			 </ul>
+		    </div>
                 
-            <a href="#"><img src="images/p1.jpg" alt="" title="" border="0" class="projects" /></a>
-            <a href="#"><img src="images/p2.jpg" alt="" title="" border="0" class="projects" /></a>
-            <a href="#"><img src="images/p3.jpg" alt="" title="" border="0" class="projects" /></a>
+<!--             <a href="#"><img src="images/p1.jpg" alt="" title="" border="0" class="projects" /></a> -->
+<!--             <a href="#"><img src="images/p2.jpg" alt="" title="" border="0" class="projects" /></a> -->
+<!--             <a href="#"><img src="images/p3.jpg" alt="" title="" border="0" class="projects" /></a> -->
         </div>
         <!-- 产品滚动end -->  
         
