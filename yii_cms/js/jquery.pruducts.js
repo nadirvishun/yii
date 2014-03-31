@@ -1,5 +1,5 @@
 
-;(function($){
+(function($){
 
 	$.fn.kxbdMarquee = function(options){
 		var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);

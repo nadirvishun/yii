@@ -35,10 +35,10 @@ jQuery(document).ready(function(){
 		easing: 'easeInOutExpo'
 	});
 	
-	$('.roundify').corner('8px');
-	$('.wp-pagenavi span, .wp-pagenavi a').corner('3px');
-	$('#navigation li a.main_buttons').corner('5px');
-	
+//	$('.roundify').corner('8px');
+//	$('.wp-pagenavi span, .wp-pagenavi a').corner('3px');
+//	$('#navigation li a.main_buttons').corner('5px');
+//	
 	//Form
 	
 	var loader = jQuery('<div id="loader"><img src="images/ajax-loader.gif" alt="loading..." /> <span>Sending Message...</span></div>')
@@ -54,70 +54,70 @@ jQuery(document).ready(function(){
 		throw e;
 	});
 	
-	$("#contact_form").validate({
-			
-		rules: {
-			input_name: 'required',
-			input_email: {
-				required: true,
-				email: true
-			},
-			input_subject: 'required',
-			textarea_message: 'required'
-		},
-		messages: {
-			input_name: 'Name is required',
-			input_email: {
-				required: 'Email is required',
-				email: 'Invalid email format'
-			},
-			input_subject: 'Please specify a subject',
-			textarea_message: 'Message is empty'
-		},
-		errorElement: 'span',
-		errorClass: 'error_message',
-		errorPlacement: function(error, element) {
-			error.appendTo(element.parent('span').prev('label'));
-		},
-		submitHandler: function(form) {
-			jQuery(form).ajaxSubmit({
-				target : '#form_result'
-			});
-		}
-			
-	});
-	
-	$("#quick_contact").validate({
-			
-		rules: {
-			input_name: 'required',
-			input_email: {
-				required: true,
-				email: true
-			},
-			input_subject: 'required',
-			textarea_message: 'required'
-		},
-		messages: {
-			input_name: 'Name is required',
-			input_email: {
-				required: 'Email is required',
-				email: 'Invalid email format'
-			},
-			textarea_message: 'Message is empty'
-		},
-		errorElement: 'span',
-		errorClass: 'error_message',
-		errorPlacement: function(error, element) {
-			error.appendTo(element.parent('p').prev('p'));
-		},
-		submitHandler: function(form) {
-			jQuery(form).ajaxSubmit({
-				target : '#form_result'
-			});
-		}
-			
-	});
+//	$("#contact_form").validate({
+//			
+//		rules: {
+//			input_name: 'required',
+//			input_email: {
+//				required: true,
+//				email: true
+//			},
+//			input_subject: 'required',
+//			textarea_message: 'required'
+//		},
+//		messages: {
+//			input_name: 'Name is required',
+//			input_email: {
+//				required: 'Email is required',
+//				email: 'Invalid email format'
+//			},
+//			input_subject: 'Please specify a subject',
+//			textarea_message: 'Message is empty'
+//		},
+//		errorElement: 'span',
+//		errorClass: 'error_message',
+//		errorPlacement: function(error, element) {
+//			error.appendTo(element.parent('span').prev('label'));
+//		},
+//		submitHandler: function(form) {
+//			jQuery(form).ajaxSubmit({
+//				target : '#form_result'
+//			});
+//		}
+//			
+//	});
+//	
+//	$("#quick_contact").validate({
+//			
+//		rules: {
+//			input_name: 'required',
+//			input_email: {
+//				required: true,
+//				email: true
+//			},
+//			input_subject: 'required',
+//			textarea_message: 'required'
+//		},
+//		messages: {
+//			input_name: 'Name is required',
+//			input_email: {
+//				required: 'Email is required',
+//				email: 'Invalid email format'
+//			},
+//			textarea_message: 'Message is empty'
+//		},
+//		errorElement: 'span',
+//		errorClass: 'error_message',
+//		errorPlacement: function(error, element) {
+//			error.appendTo(element.parent('p').prev('p'));
+//		},
+//		submitHandler: function(form) {
+//			jQuery(form).ajaxSubmit({
+//				target : '#form_result'
+//			});
+//		}
+//			
+//	});
 	
 	//Initialize Zebra Table
 	
@@ -167,13 +167,13 @@ function zebra_table(){ //zebra table
 
 /*** Cufon ***/
 /** ----------------------------------------------------- **/
-
-Cufon.replace(
-	
-	'#featured_desc h2,' +
-	'#featured_desc h3,' +
-	'#contact_page #contact_form label,' +
-	'.comment-author,' +
-	'.font_sansation'
-				  
-,{ fontFamily: 'Sansation', hover: true });
+//
+//Cufon.replace(
+//	
+//	'#featured_desc h2,' +
+//	'#featured_desc h3,' +
+//	'#contact_page #contact_form label,' +
+//	'.comment-author,' +
+//	'.font_sansation'
+//				  
+//,{ fontFamily: 'Sansation', hover: true });

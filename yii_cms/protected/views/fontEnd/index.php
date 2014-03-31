@@ -187,16 +187,7 @@
         
         <!-- 产品滚动 -->   
 
-     <script type="text/javascript">
-   var jq=$.noConflict();
-jq(document).ready(function(){
-	jq('.marquee').kxbdMarquee({
-			direction:'left',
-			eventA:'mouseenter',
-			eventB:'mouseleave'
-	});
-});
-</script> 
+   
         <div class="left_block_wide">
             <h2>产品中心</h2>
             <div class="marquee"> 
