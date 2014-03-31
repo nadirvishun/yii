@@ -3071,3 +3071,6 @@ in E:\Github\yii\yii_cms\index.php (13)
 2014/03/31 15:24:09 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
 in D:\GitHub\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (115)
 in D:\GitHub\yii\yii_cms\index.php (13)
+2014/03/31 19:43:20 [warning] [application] Failed to set unsafe attribute "pruducts_type_img" of "PruductsType".
+in E:\Github\yii\yii_cms\protected\modules\Admin\controllers\PruductsTypeController.php (115)
+in E:\Github\yii\yii_cms\index.php (13)

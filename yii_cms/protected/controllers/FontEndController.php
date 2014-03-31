@@ -79,6 +79,76 @@ class FontEndController extends Controller
 		));
 	
 	}
+	
+	
+	/**
+	 * 产品二级页面，左侧产品类别，右侧类别包含产品
+	 * Lists type models. in spage.php page
+	 */
+	public function actionSPage($id)
+	{
+		
+			//TODO Pruducts
+			$criteria =  new CDbCriteria();
+			$criteria->condition = 'status_id = 1 and type_id =:type_id';
+			$criteria->params[':type_id'] = $id;
+			$criteria->order = 'create_time DESC';
+			 
+			$spageResult = new CActiveDataProvider('Pruducts',array(
+					'criteria'=>$criteria,
+					'pagination'=>array('pageSize'=>5),
+			));
+		
+		//prepare Nav 
+		//1 Hour cache on it.
+		$cache = Yii::app()->cache;
+		$navResults = $cache->get('Nav');
+		if ($navResults === false){
+			$navResults = Nav::model()->findAll('status_id = 1');
+			$cache->set('Nav', $navResults, 60*60);
+		}
+		 
+		//prepare Banner 
+		//1 Hour cache on it.
+		$cache = Yii::app()->cache;
+		$bannerResults = $cache->get('Banner');
+		if ($bannerResults === false){
+			$bannerResults = Banner::model()->findAll('status_id=1');
+			$cache->set('Banner', $bannerResults, 60*60);
+		}
+		
+	
+		 
+		//PruductsType的二级菜单
+		//1 hour cache
+		$productsTypeResults = $cache->get('PruductsType');
+		if ($productsTypeResults === false){
+			$productsTypeResults = PruductsType::model()->getPruductsTypeList();
+// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsType', $productsTypeResults, 60*60);
+		}
+		 
+		 
+		 
+		//test part
+		//	  echo '<pre>';
+		//	  print_r($downloadResults);
+		 
+		$this->render('spage',array(
+				'dataNav'=>$navResults,
+				
+				'dataBanner'=>$bannerResults,
+				'dataSecondNav'=>$productsTypeResults,
+				'dataSpage'=>$spageResult,
+				'id'=>$id,
+		));
+	}
+	
+	
+	
+	
+	
+	
 
 	// Uncomment the following methods and override them if needed
 	/*
