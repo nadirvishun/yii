@@ -8,7 +8,7 @@
 <title>Yii CMS</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/css/style.css" media="screen" />
 
-
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/css/sstyle.css">
 
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/jquery.core.js"></script>
 

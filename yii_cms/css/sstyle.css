@@ -1,0 +1,59 @@
+/**
+ * 以下是为了产品列表子页面定义的
+ */
+
+address,caption,cite,code,dfn,em,strong,th,var { 
+font-weight: normal;
+font-style: normal;
+} 
+
+#spage_content_left{
+  width: 200px;
+  min-height: 400px;
+  float:left;
+  background: url('../images/secondimages/spage_left_line.jpg') no-repeat 100% 0%;
+}
+#spage_menu{
+  margin-top : 50px;
+}
+#spage_content_left li{
+  width:200px;
+  height:15px;
+}
+.spage_select{
+  background: url('../images/secondimages/spage_select.jpg') no-repeat 80% 100%;
+}
+.spage_line{
+  width:200px;
+  height:10px!important;
+  background:url('../images/secondimages/spage_line.jpg') no-repeat 30% 50%;
+}
+#spage_content_left li a{
+  color:black;
+  text-decoration: none;
+  width:200px;
+  display:block;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#spage_content_right{
+  width: 750px;
+  min-height:400px;
+  float:left;
+}
+#spage_content_right li{
+  width:210px;
+  min-height:40px;
+  padding:10px;
+}
+
+.grey_line{
+  background : url('../images/secondimages/grey_line.gif') repeat-x 50% 0%;
+}
+
+#test_li{
+	width:200px;
+	float:left;
+	display:inline
+}

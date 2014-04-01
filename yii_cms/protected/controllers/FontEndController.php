@@ -26,11 +26,11 @@ class FontEndController extends Controller
 		 
 		//PruductsType的二级菜单
 		//1 hour cache
-		$productsTypeResults = $cache->get('PruductsType');
-		if ($productsTypeResults === false){
-			$productsTypeResults = PruductsType::model()->getPruductsTypeList();
+		$pruductsTypeResults = $cache->get('PruductsType');
+		if ($pruductsTypeResults === false){
+			$pruductsTypeResults = PruductsType::model()->getPruductsTypeList();
 // 			$newsTypeResults[998] = '下载';
-			$cache->set('PruductsType', $productsTypeResults, 60*60);
+			$cache->set('PruductsType', $pruductsTypeResults, 60*60);
 		}
 		
 		
@@ -70,7 +70,7 @@ class FontEndController extends Controller
 				'dataNav'=>$navResults,
 				
 				'dataBanner'=>$bannerResults,
-				'dataSecondNav'=>$productsTypeResults,
+				'dataPruductsType'=>$pruductsTypeResults,
 // 				'dataGonggao'=>$indexGongGaoResults,
 // 				'dataNews'=>$indexNewsResults,
 				'dataPruductsTypeImg'=>$pruductsTypeImgResults,
@@ -87,14 +87,15 @@ class FontEndController extends Controller
 	 */
 	public function actionSPage($id)
 	{
-		
+			$id = (int)$id;
+			if ($id ==0) $id = 1;
 			//TODO Pruducts
 			$criteria =  new CDbCriteria();
 			$criteria->condition = 'status_id = 1 and type_id =:type_id';
 			$criteria->params[':type_id'] = $id;
 			$criteria->order = 'create_time DESC';
 			 
-			$spageResult = new CActiveDataProvider('Pruducts',array(
+			$spageResults = new CActiveDataProvider('Pruducts',array(
 					'criteria'=>$criteria,
 					'pagination'=>array('pageSize'=>5),
 			));
@@ -121,13 +122,22 @@ class FontEndController extends Controller
 		 
 		//PruductsType的二级菜单
 		//1 hour cache
-		$productsTypeResults = $cache->get('PruductsType');
-		if ($productsTypeResults === false){
-			$productsTypeResults = PruductsType::model()->getPruductsTypeList();
+		$pruductsTypeResults = $cache->get('PruductsType');
+		if ($pruductsTypeResults === false){
+			$pruductsTypeResults = PruductsType::model()->getPruductsTypeList();
 // 			$newsTypeResults[998] = '下载';
-			$cache->set('PruductsType', $productsTypeResults, 60*60);
+			$cache->set('PruductsType', $pruductsTypeResults, 60*60);
 		}
-		 
+
+		
+		//Pruducts_type_img
+		//1 hour cache
+		$pruductsTypeImgResults = $cache->get('PruductsTypeImg');
+		if ($pruductsTypeImgResults === false){
+			$pruductsTypeImgResults = PruductsType::model()->findAll();
+			// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsTypeImg', $pruductsTypeImgResults, 60*60);
+		}
 		 
 		 
 		//test part
@@ -138,8 +148,9 @@ class FontEndController extends Controller
 				'dataNav'=>$navResults,
 				
 				'dataBanner'=>$bannerResults,
-				'dataSecondNav'=>$productsTypeResults,
-				'dataSpage'=>$spageResult,
+				'dataPruductsType'=>$pruductsTypeResults,
+				'dataPruductsTypeImg'=>$pruductsTypeImgResults,
+				'dataSpage'=>$spageResults,
 				'id'=>$id,
 		));
 	}

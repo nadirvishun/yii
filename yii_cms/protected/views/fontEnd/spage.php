@@ -23,7 +23,7 @@
             		<?php endforeach;?>
               	<?php endif;?>
               	</ul> 
-                </ul> -->
+                
             </div>
             <!------ nav end --------->
 		</div>
@@ -80,8 +80,48 @@
         <!--------------- banner end ---------------->
         
         <!---------------- 中间部分开始 ---------------->
-        <div class="center_content"> 
+        <div class="center_content">
+        	<!----- 左侧边栏 -----> 
+        	<div id="spage_content_left">
+        		<ul id="spage_menu">
+    			<?php $i=0; foreach ($dataPruductsTypeImg as $PruductsTypeImgItem):?>
+    			<?php if ($i!=0):?>
+    				<li class="spage_line"></li>
+    			<?php endif;?>
+    				<?php  $i=$i+1;?>
+    				<li <?php echo $id==$PruductsTypeImgItem['id']?'class="spage_select"':'';?>><?php echo CHtml::link($PruductsTypeImgItem['pruducts_type_name'], array('spage','id'=>$PruductsTypeImgItem['id']))?></li>
+   				 <?php endforeach;?>
+   				 </ul>
+        	</div>
         	
-        
+        	<!----- 右侧边栏 ----->
+        	<div id="spage_content_right">
+        		<!---- 面包圈 ---->
+        		<div id="index_breadcrumbs">
+					<p id="index_breadcrumb"><?php echo CHtml::link('Home',Yii::app()->homeUrl)?> >> <?php echo isset($dataPruductsType[$id])?$dataPruductsType[$id]:''?></p>
+					<ul id="nav_second"></ul>
+				</div>
+				<!--- 面包圈结束 --->
+				
+        		<ul>
+        			<?php $this->widget('zii.widgets.CListView', array(
+						'dataProvider'=>$dataSpage,
+						'itemView'=>'_slistview',
+		   				'summaryText'=>'第{start}-第{end}条记录，总记录：{count}', //summary text
+						'emptyText'=>'未找到相关资料',
+//		   				 'template'=>',, {items} and {pager}.', //template
+  						'pagerCssClass'=>'page-number',//contain class
+						'pager'=>array(
+//	    				'cssFile'=>false,//disable all css property
+			  		    'header'=>'',//text before it
+			  		    'firstPageLabel'=>'第一页',//overwrite firstPage lable
+					    'lastPageLabel'=>'最后一页',//overwrite lastPage lable
+			 		    'nextPageLabel'=>'下一页',//overwrite nextPage lable
+			 		    'prevPageLabel'=>'上一页',//overwrite prePage lable
+		   			 )
+					)); ?>
+        		</ul>
+        	</div>
+        	<div class="clear"></div>
         </div>
         <!-----------------中间部分结束 ----------------->
