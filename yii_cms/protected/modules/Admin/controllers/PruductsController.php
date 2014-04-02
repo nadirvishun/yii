@@ -79,6 +79,23 @@ class PruductsController extends Controller
 				if ($model->validate(array('pruducts_img'))) {
 					$model->pruducts_img->Saveas(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
 					$model->pruducts_img=$tmpName;
+					//生成缩略图
+					$im = null;
+					$lext = strtolower($ext);
+					if($lext == 'gif')
+						$im = imagecreatefromgif(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					else if ($lext == 'jpg')
+						$im = imagecreatefromjpeg(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					else if ($lext == 'png')
+						$im = imagecreatefrompng(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					
+					imagesavealpha($im,TRUE);//设定保存完整的 alpha 通道信息
+					CThumb::resizeImage (
+					$im,200, 160,
+					Yii::app()->basePath.'/../upload/thumbnail/'.$tmpName, $ext );
+					
+					
+					
 				}else {
 					$model->pruducts_img='default';
 				}
@@ -118,6 +135,22 @@ class PruductsController extends Controller
 					$model->pruducts_img->Saveas(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
 					$model->pruducts_img=$tmpName;
 					@unlink(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpOldName);
+					@unlink(Yii::app()->basePath.'/../upload/thumbnail/'.$tmpOldName);
+					//生成缩略图
+					$im = null;
+					$lext = strtolower($ext);
+					if($lext == 'gif')
+						$im = imagecreatefromgif(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					else if ($lext == 'jpg')
+						$im = imagecreatefromjpeg(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+					else if ($lext == 'png')
+						$im = imagecreatefrompng(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpName);
+						
+					imagesavealpha($im,TRUE);//设定保存完整的 alpha 通道信息
+					CThumb::resizeImage (
+					$im,200, 160,
+					Yii::app()->basePath.'/../upload/thumbnail/'.$tmpName, $ext );
+					
 				}
 			}else {
 				$model->pruducts_img = $tmpOldName;
@@ -138,7 +171,14 @@ class PruductsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		//delete img
+		$model=$this->loadModel($id);
+		$tmpOldName=$model->pruducts_img;
+		@unlink(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpOldName);
+		@unlink(Yii::app()->basePath.'/../upload/thumbnail/'.$tmpOldName);
+		//delete othe thing
 		$this->loadModel($id)->delete();
+		
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

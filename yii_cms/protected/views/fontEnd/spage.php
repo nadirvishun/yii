@@ -103,13 +103,15 @@
 				</div>
 				<!--- 面包圈结束 --->
 				
-        		<ul>
+<!--         		<ul> -->
         			<?php $this->widget('zii.widgets.CListView', array(
 						'dataProvider'=>$dataSpage,
 						'itemView'=>'_slistview',
 		   				'summaryText'=>'第{start}-第{end}条记录，总记录：{count}', //summary text
 						'emptyText'=>'未找到相关资料',
-//		   				 'template'=>',, {items} and {pager}.', //template
+//         				'template'=>'<div class="summary">{summary}</div><div class="sorter">{sorter}</div><div class="list">{items}</div><div class="pager-number">{pager}</div>',
+// 		   				 'template'=>',, {items} and {pager}.', //template
+//         				'itemsCssClass'=>'items',//contain class
   						'pagerCssClass'=>'page-number',//contain class
 						'pager'=>array(
 //	    				'cssFile'=>false,//disable all css property
@@ -120,7 +122,7 @@
 			 		    'prevPageLabel'=>'上一页',//overwrite prePage lable
 		   			 )
 					)); ?>
-        		</ul>
+<!--         		</ul> -->
         	</div>
         	<div class="clear"></div>
         </div>

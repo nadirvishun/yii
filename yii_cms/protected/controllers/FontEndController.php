@@ -97,7 +97,7 @@ class FontEndController extends Controller
 			 
 			$spageResults = new CActiveDataProvider('Pruducts',array(
 					'criteria'=>$criteria,
-					'pagination'=>array('pageSize'=>5),
+					'pagination'=>array('pageSize'=>6),
 			));
 		
 		//prepare Nav 

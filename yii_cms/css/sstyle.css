@@ -1,7 +1,9 @@
 /**
  * 以下是为了产品列表子页面定义的
  */
-
+body{
+	font-size:14px;
+}
 address,caption,cite,code,dfn,em,strong,th,var { 
 font-weight: normal;
 font-style: normal;
@@ -55,5 +57,24 @@ font-style: normal;
 #test_li{
 	width:200px;
 	float:left;
-	display:inline
+	
 }
+.page-number{
+	width:710px;
+	text-align:center;
+	margin-top:30px;
+	padding:40px 0px 20px 0px;
+	
+}
+body,div,dl,dt,dd,ul,ol,li,hr,h1,h2,h3,h4,h5,h6,pre, 
+form,fieldset,input,textarea,p,blockquote,th,td { 
+padding: 0px; 
+margin: 0px;
+background: transparent;
+position:relative;
+word-wrap : break-word ;
+word-break : break-all ;
+}
+ol,ul { 
+list-style: none; 
+} 
