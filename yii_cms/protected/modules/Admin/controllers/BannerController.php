@@ -141,6 +141,11 @@ class BannerController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		//删除upload中的图片
+		$model=$this->loadModel($id);
+		$tmpOldName=$model->banner_img;
+		@unlink(Yii::app()->basePath.'/../upload/banner_img/'.$tmpOldName);
+		//删除其它
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

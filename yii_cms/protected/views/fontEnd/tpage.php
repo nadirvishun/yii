@@ -1,4 +1,4 @@
-<!------------ 最顶部圆角显示 ---------------->
+<!----- 最顶部圆角显示 ---------------->
     <div class="top_corner"></div>
     
     <!----------- 包含整个主体页面 --------------->
@@ -89,7 +89,7 @@
     				<li class="spage_line"></li>
     			<?php endif;?>
     				<?php  $i=$i+1;?>
-    				<li <?php echo $id==$PruductsTypeImgItem['id']?'class="spage_select"':'';?>><?php echo CHtml::link($PruductsTypeImgItem['pruducts_type_name'], array('spage','id'=>$PruductsTypeImgItem['id']))?></li>
+    				<li <?php echo $tid==$PruductsTypeImgItem['id']?'class="spage_select"':'';?>><?php echo CHtml::link($PruductsTypeImgItem['pruducts_type_name'], array('spage','id'=>$PruductsTypeImgItem['id']))?></li>
    				 <?php endforeach;?>
    				 </ul>
         	</div>
@@ -98,31 +98,12 @@
         	<div id="spage_content_right">
         		<!---- 面包圈 ---->
         		<div id="index_breadcrumbs">
-					<p id="index_breadcrumb"><?php echo CHtml::link('Home',Yii::app()->homeUrl)?> >> <?php echo isset($dataPruductsType[$id])?$dataPruductsType[$id]:''?></p>
+				<!-- <p id="index_breadcrumb"><?php echo CHtml::link('Home',Yii::app()->homeUrl)?> >> <?php echo isset($dataPruductsType[$dataPruductsName->type_id])?CHtml::link($dataPruductsType[$dataPruductsName->type_id],array('spage','id'=>$dataPruductsName->type_id)):''?>>><?php echo CHtml::encode($dataPruductsName['pruducts_name'])?></p> -->
+					<p id="index_breadcrumb"><?php echo CHtml::link('Home',Yii::app()->homeUrl)?> >> <?php echo isset($dataPruductsType[$tid])?CHtml::link($dataPruductsType[$tid],array('spage','id'=>$tid)):''?> >> <?php echo CHtml::encode($dataPruductsName['pruducts_name'])?></p>
 					<ul id="nav_second"></ul>
 				</div>
 				<!--- 面包圈结束 --->
 				
-<!--         		<ul> -->
-        			<?php $this->widget('zii.widgets.CListView', array(
-						'dataProvider'=>$dataSpage,
-						'itemView'=>'_slistview',
-		   				'summaryText'=>'第{start}-第{end}条记录，总记录：{count}', //summary text
-						'emptyText'=>'未找到相关资料',
-        				'template'=>'{summary}{sorter}{items}<div class="clear"></div>{pager}',
-// 		   				 'template'=>',, {items} and {pager}.', //template
-//         				'itemsCssClass'=>'items',//contain class
-  						'pagerCssClass'=>'page-number',//contain class
-						'pager'=>array(
-//	    				'cssFile'=>false,//disable all css property
-			  		    'header'=>'',//text before it
-			  		    'firstPageLabel'=>'第一页',//overwrite firstPage lable
-					    'lastPageLabel'=>'最后一页',//overwrite lastPage lable
-			 		    'nextPageLabel'=>'下一页',//overwrite nextPage lable
-			 		    'prevPageLabel'=>'上一页',//overwrite prePage lable
-		   			 )
-					)); ?>
-<!--         		</ul> -->
         	</div>
         	<div class="clear"></div>
         </div>

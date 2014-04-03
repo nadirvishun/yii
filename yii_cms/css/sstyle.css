@@ -3,6 +3,7 @@
  */
 body{
 	font-size:14px;
+
 }
 address,caption,cite,code,dfn,em,strong,th,var { 
 font-weight: normal;
@@ -44,11 +45,7 @@ font-style: normal;
   min-height:400px;
   float:left;
 }
-#spage_content_right li{
-  width:210px;
-  min-height:40px;
-  padding:10px;
-}
+
 
 .grey_line{
   background : url('../images/secondimages/grey_line.gif') repeat-x 50% 0%;
@@ -57,16 +54,19 @@ font-style: normal;
 #test_li{
 	width:200px;
 	float:left;
-	
+	margin-left:8px;
+	margin-top:10px;
+	text-align:center;
+	padding:10px;
 }
 .page-number{
 	width:710px;
 	text-align:center;
-	margin-top:30px;
+
 	padding:40px 0px 20px 0px;
 	
 }
-body,div,dl,dt,dd,ul,ol,li,hr,h1,h2,h3,h4,h5,h6,pre, 
+div,dl,dt,dd,ul,ol,li,hr,h1,h2,h3,h4,h5,h6,pre, 
 form,fieldset,input,textarea,p,blockquote,th,td { 
 padding: 0px; 
 margin: 0px;

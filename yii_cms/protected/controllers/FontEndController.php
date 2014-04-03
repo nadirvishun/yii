@@ -156,7 +156,82 @@ class FontEndController extends Controller
 	}
 	
 	
+	/**
+	 * 产品3级页面，显示产品详细信息
+	 * Lists type models. in spage.php page
+	 */
+	public function actionTPage($id)
+	{
+		$id = (int)$id;
+		if ($id ==0) $id = 1;
+		 
+		$pruductsNameResult = Pruducts::model()->find('id = :id',array(':id'=>$id));
+		$this->pageTitle .= ' - '.$pruductsNameResult->pruducts_name;
+		$tid=$pruductsNameResult->type_id;
+		
+		
+		//prepare Nav 
+		//1 Hour cache on it.
+		$cache = Yii::app()->cache;
+		$navResults = $cache->get('Nav');
+		if ($navResults === false){
+			$navResults = Nav::model()->findAll('status_id = 1');
+			$cache->set('Nav', $navResults, 60*60);
+		}
+		 
+		//prepare Banner 
+		//1 Hour cache on it.
+		$cache = Yii::app()->cache;
+		$bannerResults = $cache->get('Banner');
+		if ($bannerResults === false){
+			$bannerResults = Banner::model()->findAll('status_id=1');
+			$cache->set('Banner', $bannerResults, 60*60);
+		}
+		
 	
+		 
+		//PruductsType的二级菜单
+		//1 hour cache
+		$pruductsTypeResults = $cache->get('PruductsType');
+		if ($pruductsTypeResults === false){
+			$pruductsTypeResults = PruductsType::model()->getPruductsTypeList();
+// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsType', $pruductsTypeResults, 60*60);
+		}
+		 
+		//Pruducts_type_img
+		//1 hour cache
+		$pruductsTypeImgResults = $cache->get('PruductsTypeImg');
+		if ($pruductsTypeImgResults === false){
+			$pruductsTypeImgResults = PruductsType::model()->findAll();
+			// 			$newsTypeResults[998] = '下载';
+			$cache->set('PruductsTypeImg', $pruductsTypeImgResults, 60*60);
+		}
+						
+			
+		//get pruducts_img data
+		//1 hour cache
+		$pruductsImgResults = $cache->get('Pruducts');
+		if ($pruductsImgResults === false){
+			$pruductsImgResults = Pruducts::model()->findAll('status_id=1 order by id DESC');
+			$cache->set('Pruducts', $pruductsImgResults, 60*60);
+		}
+		 
+		//test part
+		//	  echo '<pre>';
+		//	  print_r($newResult);
+		 
+		$this->render('tpage',array(
+				'dataNav'=>$navResults,
+				
+				'dataBanner'=>$bannerResults,
+				'dataPruductsType'=>$pruductsTypeResults,
+				'dataPruductsName'=>$pruductsNameResult,
+				'dataPruductsTypeImg'=>$pruductsTypeImgResults,
+				'dataPruductsImg'=>$pruductsImgResults,
+				'tid'=>$tid,
+		));
+	}
 	
 	
 	

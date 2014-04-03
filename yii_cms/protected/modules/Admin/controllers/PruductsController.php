@@ -171,7 +171,7 @@ class PruductsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//delete img
+		//delete the file “upload” include img
 		$model=$this->loadModel($id);
 		$tmpOldName=$model->pruducts_img;
 		@unlink(Yii::app()->basePath.'/../upload/pruducts_img/'.$tmpOldName);
