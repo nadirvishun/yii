@@ -103,6 +103,24 @@
 					<ul id="nav_second"></ul>
 				</div>
 				<!--- 面包圈结束 --->
+				<!------ 产品图片开始 ------>
+				<div class="summary">
+					<!-- 图片 -->
+					<div class="gallary">
+						<img class="picture" src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_img/<?php echo $dataPruductsImg?>"/>
+					</div>
+					<!-- 名称 -->
+					<div class="property">
+						<p><?php echo $dataPruductsName->pruducts_name?></p>
+					</div>
+				</div>
+				<!------ 产品图片结束 ------>
+				
+				<!------ 产品详情开始 ------>
+				<div>
+				</div>
+				<!------ 产品详情结束  ------>
+				
 				
         	</div>
         	<div class="clear"></div>

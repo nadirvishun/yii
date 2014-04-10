@@ -77,4 +77,27 @@ word-break : break-all ;
 }
 ol,ul { 
 list-style: none; 
-} 
+}
+
+/**
+ * 以下是三级页面的css
+ */
+
+.summary{ 
+	margin:30px 10px 30px 10px;
+	
+}
+.gallery{ 
+	position:relative; 
+    float:left; 
+    width:450px;
+}
+.property{ 
+	float:right; 
+	width:260px; 
+	overflow:hidden;
+}
+.picture{
+	width:430px;
+	height:280px;
+}

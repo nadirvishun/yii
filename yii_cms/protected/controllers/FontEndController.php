@@ -165,9 +165,10 @@ class FontEndController extends Controller
 		$id = (int)$id;
 		if ($id ==0) $id = 1;
 		 
-		$pruductsNameResult = Pruducts::model()->find('id = :id',array(':id'=>$id));
-		$this->pageTitle .= ' - '.$pruductsNameResult->pruducts_name;
-		$tid=$pruductsNameResult->type_id;
+		$pruductsResult = Pruducts::model()->find('id = :id',array(':id'=>$id));
+		$this->pageTitle .= ' - '.$pruductsResult->pruducts_name;
+		$tid=$pruductsResult->type_id;//产品id所在的类别
+		$pruductsImgResults=$pruductsResult->pruducts_img;
 		
 		
 		//prepare Nav 
@@ -209,13 +210,7 @@ class FontEndController extends Controller
 		}
 						
 			
-		//get pruducts_img data
-		//1 hour cache
-		$pruductsImgResults = $cache->get('Pruducts');
-		if ($pruductsImgResults === false){
-			$pruductsImgResults = Pruducts::model()->findAll('status_id=1 order by id DESC');
-			$cache->set('Pruducts', $pruductsImgResults, 60*60);
-		}
+		
 		 
 		//test part
 		//	  echo '<pre>';
@@ -226,7 +221,7 @@ class FontEndController extends Controller
 				
 				'dataBanner'=>$bannerResults,
 				'dataPruductsType'=>$pruductsTypeResults,
-				'dataPruductsName'=>$pruductsNameResult,
+				'dataPruductsName'=>$pruductsResult,
 				'dataPruductsTypeImg'=>$pruductsTypeImgResults,
 				'dataPruductsImg'=>$pruductsImgResults,
 				'tid'=>$tid,
