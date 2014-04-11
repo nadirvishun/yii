@@ -8,7 +8,7 @@
         <div id="header">
         
             <!----- logo begin ------>
-            <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+            <div id="logo"><a href="<?php echo Yii::app()->homeUrl?>"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
             <!----- logo end ------->
             
 			<!-- <a href="make-a-donation.html" class="make_donation"></a> -->
@@ -110,7 +110,7 @@
         		<?php $i=1;foreach ($dataPruductsTypeImg as $PruductsTypeImgItem):?>
         			<div class="home_section_left">
         			<img src="images/icon<?php echo $i?>.gif" alt="" title="" class="home_section_icon" border="0">
-        			<h2 class="home_title"><?php echo $PruductsTypeImgItem['pruducts_type_name']?></h2>
+        			<a href="<?php echo Yii::app()->homeUrl?>?r=fontend/spage&id=<?php echo $PruductsTypeImgItem['id']?>"><h2 class="home_title"><?php echo $PruductsTypeImgItem['pruducts_type_name']?></h2></a>
         			<div class="home_section_thumb">
         				<img src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_type_img/<?php echo $PruductsTypeImgItem['pruducts_type_img']?>"  width="265" height="77" alt="" title="" border="0">
         			</div>
@@ -194,7 +194,7 @@
     		 <ul>
     			<?php if(!empty($dataPruductsImg)):?>
     				<?php foreach ($dataPruductsImg as $PruductsImgItem):?>
-    					<li><a href=""><img src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_img/<?php echo $PruductsImgItem['pruducts_img']?>"/><em><?php echo $PruductsImgItem['pruducts_name']?></em></a></li>
+    					<li><a href="<?php echo Yii::app()->homeUrl?>?r=fontend/tpage&id=<?php echo $PruductsImgItem['id']?>"><img src="<?php echo Yii::app()->baseUrl ?>/upload/pruducts_img/<?php echo $PruductsImgItem['pruducts_img']?>"/><em><?php echo $PruductsImgItem['pruducts_name']?></em></a></li>
     				<?php endforeach;?>
     			<?php endif;?>
 <!--        			 <li><a href="http://www.update8.com/effects/"><img src="demo/01.jpg"/><em>jquery 特效</em></a></li> -->

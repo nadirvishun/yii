@@ -68,16 +68,18 @@ img{ border:none;}
    
  <!-- footer begin -->
         <div class="footer">
-        	<div class="copyright"><a href="http://csstemplatesmarket.com/" target="_blank">Free CSS Templates</a> | <a href="http://csstemplatesmarket.com/" target="_blank">by CssTemplatesMarket</a></div>
+        <p class="footer_p">nadirvishun@gmail.com &copy; 2014-2014 漫游云巅  All Right Received.</p>
+			<p>地址：山东潍坊   邮编:261000  电话:0536-5077717</p>
+<!--         	<div class="copyright"><a href="http://csstemplatesmarket.com/" target="_blank">Free CSS Templates</a> | <a href="http://csstemplatesmarket.com/" target="_blank">by CssTemplatesMarket</a></div> -->
         
-        	<div class="footer_links">
-                <a class="current" href="index.html" title="">Home</a>
-                <a href="#" title="">About Company</a>
-                <a href="#" title="">Projects</a>
-                <a href="#" title="">Clients</a>
-                <a href="#" title="">Testimonials</a>
-                <a href="contact.html" title="">Contact</a>            
-            </div>
+<!--         	<div class="footer_links"> -->
+<!--                 <a class="current" href="index.html" title="">Home</a> -->
+<!--                 <a href="#" title="">About Company</a> -->
+<!--                 <a href="#" title="">Projects</a> -->
+<!--                 <a href="#" title="">Clients</a> -->
+<!--                 <a href="#" title="">Testimonials</a> -->
+<!--                 <a href="contact.html" title="">Contact</a>             -->
+<!--             </div> -->
         </div>
        <!-- footer end -->
      

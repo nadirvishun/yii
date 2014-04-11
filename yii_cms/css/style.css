@@ -42,7 +42,7 @@ float:left;
 }
 /*----------------------menu-------------------------*/
 #menu{
-width:530px;
+width:480px;
 float:right;
 padding:40px 0 0 0;
 }
@@ -311,6 +311,15 @@ width:960px;
 margin:auto;
 background:url(../images/footer_bg.jpg) no-repeat center;
 height:65px;
+
+}
+.footer p{
+	text-align:center;
+	
+}
+.footer_p{
+	padding-top:20px;
+	
 }
 .copyright{
 float:left;

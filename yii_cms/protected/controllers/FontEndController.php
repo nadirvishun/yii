@@ -2,6 +2,33 @@
 
 class FontEndController extends Controller
 {
+	public function filters()
+	{
+		return array(
+				'accessControl', // perform access control for CRUD operations
+		);
+	}
+	
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+				array('allow', // allow authenticated user to perform 'create' and 'update' actions
+						'actions'=>array('index','spage','tpage'),
+						'users'=>array('*'),
+				),
+				array('deny',  // deny all users
+						'users'=>array('*'),
+				),
+		);
+	}
+	
+	
+	
 	public function actionIndex()
 	{
 		//prepare Nav 
@@ -166,7 +193,7 @@ class FontEndController extends Controller
 		if ($id ==0) $id = 1;
 		 
 		$pruductsResult = Pruducts::model()->find('id = :id',array(':id'=>$id));
-		$this->pageTitle .= ' - '.$pruductsResult->pruducts_name;
+// 		$this->pageTitle .= ' - '.$pruductsResult->pruducts_name;
 		$tid=$pruductsResult->type_id;//产品id所在的类别
 		$pruductsImgResults=$pruductsResult->pruducts_img;
 		
@@ -228,7 +255,31 @@ class FontEndController extends Controller
 		));
 	}
 	
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadModel($id)
+	{
+		$model=User::model()->findByPk((int)$id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
 	
+	/**
+	 * Performs the AJAX validation.
+	 * @param CModel the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
 	
 
 	// Uncomment the following methods and override them if needed

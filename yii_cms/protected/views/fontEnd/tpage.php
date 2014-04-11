@@ -8,7 +8,7 @@
         <div id="header">
         
             <!----- logo begin ------>
-            <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+            <div id="logo"><a href="<?php echo Yii::app()->homeUrl?>"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
             <!----- logo end ------->
             
 			
@@ -31,50 +31,9 @@
         
         <!--------------- banner begin -------------------->
         <!-------------- 红色框 begin---------------->
-        <div class="middle_banner">               
-        
-        <!------- banner content begin ---------->
-		<div class="featured_slider">
-		
-      	<!-- begin: sliding featured banner -->
-		<div id="featured_border" class="jcarousel-container">
-            <div id="featured_wrapper" class="jcarousel-clip">
-               <ul id="featured_images" class="jcarousel-list">
-              	 <?php if (!empty($dataBanner)):?>
-               		<?php foreach ($dataBanner as $BannerItem):?>
-               		 <li> <img src="<?php echo Yii::app()->baseUrl ?>/upload/banner_img/<?php echo $BannerItem['banner_img']?>" width="965" height="280" alt=""/></li>
-               		<!-- <li><img src="<?php echo Yii::app()->basePath.'/../upload/banner_img/'.$BannerItem['banner_img']?>" width="965" height="280" alt=""/></li> -->
-               		<?php endforeach;?>
-              	<?php endif;?>
-              		
-
-               </ul>
-            </div>
-            <div id="featured_positioner_desc" class="jcarousel-container">
-               <div id="featured_wrapper_desc" class="jcarousel-clip">
-                  <ul id="featured_desc" class="jcarousel-list">   
-                  		<?php if(!empty($dataBanner)):?>
-                  			<?php foreach ($dataBanner as $BannerItem):?>
-                  			<!--  <li><div><P><?php echo $BannerItem['banner_title']?></P></div></li>-->
-                  			<li><div><a href="<?php echo $BannerItem['banner_url']?>" target="_blank"><?php echo $BannerItem['banner_title']?></a></div></li>
-                  			<?php endforeach;?>
-                  		<?php endif;?>              
-
-                  </ul>
-               </div>
-           </div>
-            <ul id="featured_buttons" class="clear_fix">
-            		<?php if(!empty($dataBanner)): ?>
-            			<?php foreach ($dataBanner as $BannerItem):?>
-            			<li><?php echo $BannerItem['id']?></li>
-            			<?php endforeach;?>
-            		<?php endif;?>
-
-            </ul>
-		</div>
-		<!-- end: sliding featured banner -->
-		</div>
-		<!------- banner content end ----------->
+        <div class="second_middle_banner">               
+        	<img class="second_middle_img" alt="" src="./images/secondbanner.jpg"/>
+       
         </div>
         <!--------------红色框 end------------------>
         <!--------------- banner end ---------------->
@@ -111,13 +70,16 @@
 					</div>
 					<!-- 名称 -->
 					<div class="property">
-						<p><?php echo $dataPruductsName->pruducts_name?></p>
+						<p>产品名称：<?php echo $dataPruductsName->pruducts_name?></p>
 					</div>
+					<div class="clear"></div>
 				</div>
 				<!------ 产品图片结束 ------>
 				
 				<!------ 产品详情开始 ------>
-				<div>
+				<p class="detail_0">产品描述</p>
+				<div class="detail">
+					<?php echo $dataPruductsName->pruducts_content?>
 				</div>
 				<!------ 产品详情结束  ------>
 				
