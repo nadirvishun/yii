@@ -54,7 +54,7 @@ $('.search-form form').submit(function(){
 		array('name'=>'type_id','value'=>'$data->typeName->pruducts_type_name','filter'=>PruductsType::model()->getPruductsTypeList(),'htmlOptions'=>array('width'=>'45px')),
 // 		'status_id',
 		array('name'=>'status_id','value'=>'$data->statusName->status_name','filter'=>Status::model()->getStatusList(),'htmlOptions'=>array('width'=>'45px')),
-		
+		'hit',
 		/*
 		'create_time',
 		'update_time',

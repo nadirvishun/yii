@@ -71,6 +71,7 @@
 					<!-- 名称 -->
 					<div class="property">
 						<p>产品名称：<?php echo $dataPruductsName->pruducts_name?></p>
+						<P>点击量：<?php echo $dataPruductsName->hit?>次</P>
 					</div>
 					<div class="clear"></div>
 				</div>

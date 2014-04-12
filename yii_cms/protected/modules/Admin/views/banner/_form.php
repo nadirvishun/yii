@@ -33,7 +33,7 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'banner_img'); ?>
-		<p class="hint">图片尺寸为：xxxx,格式为jpg/gif/png</p>
+		<p class="hint">图片尺寸为： 965px * 280px ,格式为jpg/gif/png</p>
 		<?php echo $form->fileField($model,'banner_img',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'banner_img'); ?>
 	</div>

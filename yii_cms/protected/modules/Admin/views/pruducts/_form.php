@@ -26,6 +26,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pruducts_content'); ?>
+		<p class="hint">图片尺寸为： 740px * xxx,格式为jpg/gif/png</p>
 		<?php $this->widget('application.extensions.editor.CKkceditor',array(
    			 "model"=>$model,                # Data-Model
    			 "attribute"=>'pruducts_content',         # Attribute in the Data-Model
@@ -40,7 +41,7 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'pruducts_img'); ?>
-		<p class="hint">图片尺寸为：xxxx,格式为jpg/gif/png</p>
+		<p class="hint">图片尺寸为： 430px * 280px,格式为jpg/gif/png</p>
 		<?php echo $form->fileField($model,'pruducts_img',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'pruducts_img'); ?>
 	</div>

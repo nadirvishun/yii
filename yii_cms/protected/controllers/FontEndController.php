@@ -196,7 +196,9 @@ class FontEndController extends Controller
 // 		$this->pageTitle .= ' - '.$pruductsResult->pruducts_name;
 		$tid=$pruductsResult->type_id;//产品id所在的类别
 		$pruductsImgResults=$pruductsResult->pruducts_img;
-		
+		//添加点击数
+		$pruductsResult->hit=$pruductsResult->hit+1;
+		$pruductsResult->Save();
 		
 		//prepare Nav 
 		//1 Hour cache on it.
@@ -245,7 +247,7 @@ class FontEndController extends Controller
 		 
 		$this->render('tpage',array(
 				'dataNav'=>$navResults,
-				
+			
 				'dataBanner'=>$bannerResults,
 				'dataPruductsType'=>$pruductsTypeResults,
 				'dataPruductsName'=>$pruductsResult,
