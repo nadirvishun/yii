@@ -1,7 +1,8 @@
 <?php
 
-class FontEndController extends Controller
+class FontendController extends Controller
 {
+	public $layout='/layouts/column1';
 	public function filters()
 	{
 		return array(
